@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>From SAB Dataset to Decoding &#8212; Sab Analysis 0 documentation</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/my-styles.css" type="text/css" />
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ERP Analyses example" href="../ERP_examples/plot_erp_example.html" />
+    <link rel="prev" title="General Examples" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Sab Analysis</a>
+        <span class="navbar-text navbar-version pull-left"><b>0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../../rst/overview.rst.html">Overview</a></li>
+                <li><a href="../../rst/modules.html">API</a></li>
+                <li><a href="../index.html">Examples</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/modules.html">pySAB</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">General Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html#decoding-example">Decoding example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#erp-example">ERP example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#phase-utils-example">Phase Utils example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#time-features-examples">Time Features examples</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../../_sources/auto_examples/Decoding_examples/plot_full_pipeline_example.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">From SAB Dataset to Decoding</a></li>
+</ul>
+
+  <li>
+    <a href="../index.html" title="Previous Chapter: General Examples"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; General Examples</span>
+    </a>
+  </li>
+  <li>
+    <a href="../ERP_examples/plot_erp_example.html" title="Next Chapter: ERP Analyses example"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">ERP Analyses example &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/auto_examples/Decoding_examples/plot_full_pipeline_example.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="from-sab-dataset-to-decoding">
+<span id="sphx-glr-auto-examples-decoding-examples-plot-full-pipeline-example-py"></span><h1>From SAB Dataset to Decoding<a class="headerlink" href="#from-sab-dataset-to-decoding" title="Permalink to this headline">¶</a></h1>
+<p>This example shows how to use the different modules of SAB_main from the creation of the SAB Dataset to decoding EEG</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sab_dataset</span>
+<span class="kn">from</span> <span class="nn">timedecoder</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">svm</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s1">&#39;paper&#39;</span><span class="p">)</span>
+
+
+<span class="n">sab_dataset_dirpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;pySAB&#39;</span><span class="p">,</span> <span class="s1">&#39;sample_data&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;pySAB&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;pySAB&#39;</span><span class="p">,</span> <span class="s1">&#39;sample_data&#39;</span><span class="p">)</span>
+<span class="n">sab_dataset_filename</span> <span class="o">=</span> <span class="s1">&#39;sab_dataset_name.p&#39;</span>
+
+<span class="n">load_dataset</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Dataset creation from the matlab dataset
+This first step create the python dataset of the SAB data from the matlab dataset. All is needed is the path towards
+the matlab dataset directory and the id of the subject.
+The matlab directory must contain the variables EEGrec.mat, hits.mat, correctRejects.mat, falseAlarms.mat,
+omissions.mat, reactionTimes.mat</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">load_dataset</span><span class="p">:</span>
+    <span class="n">sab_dataset</span> <span class="o">=</span> <span class="n">sab_dataset</span><span class="o">.</span><span class="n">SabDataset</span><span class="p">(</span><span class="n">sab_dataset_dirpath</span><span class="p">,</span> <span class="s1">&#39;subject_id&#39;</span><span class="p">)</span>
+    <span class="c1">###########################################</span>
+    <span class="c1"># If you want to specify colors for the different conditions, use the color_dict argument. It must be a dictionnary</span>
+    <span class="c1"># with the condition names as keys and the colors as values. For instance :</span>
+    <span class="c1"># sab_dataset = sab_dataset.SabDataset(&#39;path_to_the_matlab_directory&#39;, &#39;subject_id&#39;,</span>
+    <span class="c1">#                          colors_dict={&#39;hits&#39;: &#39;g&#39;, &#39;cr&#39;: &#39;r&#39;, &#39;omission&#39;: &#39;y&#39;, &#39;fa&#39;: &#39;m&#39;})</span>
+    <span class="c1"># To save the newly created dataset use the save method which takes 2 arguments : the directory where the dataset</span>
+    <span class="c1"># will be saved and the filename. By default the filename will be similar to sab_dataset_rec_001AA_150218_1542.p</span>
+    <span class="n">sab_dataset</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;path_to_save_the_dataset&#39;</span><span class="p">,</span> <span class="s1">&#39;sab_dataset_name.p&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1">###########################################</span>
+    <span class="c1"># If you have previously created the dataset, you can load it using the load_sab_dataset function. The function</span>
+    <span class="c1"># takes as argument the path of the file</span>
+    <span class="n">sab_dataset</span> <span class="o">=</span> <span class="n">sab_dataset</span><span class="o">.</span><span class="n">load_sab_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sab_dataset_dirpath</span><span class="p">,</span> <span class="n">sab_dataset_filename</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>You can print the informations of the dataset using the print function</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">sab_dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SAB</span> <span class="n">dataset</span> <span class="n">REC</span> <span class="o">-</span> <span class="n">subject_id</span>
+<span class="mi">112</span> <span class="n">channels</span><span class="p">,</span> <span class="mi">1434</span> <span class="n">points</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.10</span><span class="p">,</span> <span class="mf">0.60</span><span class="n">s</span><span class="p">],</span> <span class="n">sampling</span> <span class="n">rate</span> <span class="mi">2048</span> <span class="n">Hz</span>
+<span class="mi">540</span> <span class="n">trials</span> <span class="p">:</span> <span class="mi">183</span> <span class="n">hits</span><span class="p">,</span> <span class="mi">173</span> <span class="n">correct</span> <span class="n">rejects</span><span class="p">,</span> <span class="mi">87</span> <span class="n">omissions</span><span class="p">,</span> <span class="mi">97</span> <span class="n">false</span> <span class="n">alarms</span>
+<span class="n">Channel</span> <span class="n">Info</span> <span class="p">:</span> <span class="mi">112</span> <span class="n">channels</span> <span class="ow">and</span> <span class="mi">17</span> <span class="n">electrodes</span>
+<span class="mi">108</span> <span class="n">EEG</span> <span class="n">channels</span> <span class="o">-</span> <span class="mi">4</span> <span class="n">non</span><span class="o">-</span><span class="n">EEG</span> <span class="n">channels</span>
+<span class="mi">13</span> <span class="n">EEG</span> <span class="n">electrodes</span> <span class="o">-</span> <span class="mi">4</span> <span class="n">non</span><span class="o">-</span><span class="n">EEG</span> <span class="n">electrodes</span>
+</pre></div>
+</div>
+<p>If needed you can downsample the data using the downsample method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">sab_dataset</span><span class="o">.</span><span class="n">downsample</span><span class="p">)</span>
+
+<span class="c1"># Downsample the dataset to 256Hz</span>
+<span class="n">sab_dataset</span><span class="o">.</span><span class="n">downsample</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Help</span> <span class="n">on</span> <span class="n">method</span> <span class="n">downsample</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">sab_dataset</span><span class="p">:</span>
+
+<span class="n">downsample</span><span class="p">(</span><span class="n">decimate_order</span><span class="p">)</span> <span class="n">method</span> <span class="n">of</span> <span class="n">sab_dataset</span><span class="o">.</span><span class="n">SabDataset</span> <span class="n">instance</span>
+    <span class="n">Downsample</span> <span class="n">the</span> <span class="n">data</span> <span class="n">along</span> <span class="n">the</span> <span class="n">time</span> <span class="n">axis</span><span class="o">.</span>
+
+    <span class="n">Parameters</span>
+    <span class="o">----------</span>
+    <span class="n">decimate_order</span> <span class="p">:</span> <span class="nb">int</span>
+        <span class="n">Order</span> <span class="n">of</span> <span class="n">the</span> <span class="n">down</span><span class="o">-</span><span class="n">sampling</span><span class="o">.</span> <span class="n">Sampling</span> <span class="n">frequency</span> <span class="n">will</span> <span class="n">be</span> <span class="n">divided</span> <span class="n">by</span> <span class="n">this</span> <span class="n">number</span>
+
+<span class="n">New</span> <span class="n">sampling</span> <span class="n">rate</span> <span class="ow">is</span> <span class="mf">256.0</span>
+</pre></div>
+</div>
+<p>TimeFeature Creation from the sab_dataset
+For this step you just need to call the create_features method of SabDataset class which returns a TimeFeature instance</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_features</span> <span class="o">=</span> <span class="n">sab_dataset</span><span class="o">.</span><span class="n">create_features</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>It is possible to select some channels, electrodes or trials using respectively the chan_sel, electrode_sel or trial_sel
+arguments. See the help for more details :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">sab_dataset</span><span class="o">.</span><span class="n">create_features</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span>Help on method create_features in module sab_dataset:
+
+create_features(chan_sel=[], electrode_sel=[], trial_sel=[]) method of sab_dataset.SabDataset instance
+    Create a TimeFeatures instance from the current dataset
+
+    Parameters
+    ----------
+    chan_sel : int | str | array | None (default: None)
+        Channel selection to compute the feature only on these channels. If none, select all channels
+    electrode_sel : int | str | array | None (default: None)
+        Electrode selection to compute the feature only on these electrodes. If none, the selection is done based
+        on ``chan_sel`` parameter
+    trial_sel : array | None (default: None)
+        Trial selection to compute the features only with these trials. If none, select all trials
+
+    Returns
+    -------
+    TimeFeatures : Instance of TimeFeatures
+        TimeFeatures instance generated from the amplitude of the current dataset, given the selected channels
+
+    .. note:: If both chan_sel and electrode_sel are provided, the selection is only done given the electrode
+    selection
+</pre></div>
+</div>
+<p>You can check the time_features information using again the print function</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">time_features</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Time</span> <span class="n">Features</span> <span class="n">subject_id_rec</span> <span class="o">-</span> <span class="mi">108</span> <span class="n">features</span><span class="p">,</span> <span class="mi">180</span> <span class="n">time</span> <span class="n">points</span><span class="p">,</span> <span class="mi">540</span> <span class="n">trials</span>
+<span class="mi">4</span> <span class="n">labels</span> <span class="p">:</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Hits&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;Correct rejects&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;Omissions&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;False Alarms&#39;</span><span class="p">}</span>
+<span class="n">Feature</span> <span class="n">types</span> <span class="p">:</span> <span class="n">Amp</span>
+</pre></div>
+</div>
+<p>TimeDecoder Class
+In this step, the time_decoder instance is created from the TimeDecoder class. This class allow to run classification on
+the time_features data
+First we need to created a classifier to the time_decoder instance. It can be Support Vector Machine, LDA, … as long
+as it support 2-classes classification with fit and predict methods
+In this example, we use a SVM classifier, with C parameter set to 1</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">svm_clf</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">probability</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># We can now create the time_decoder instance.</span>
+<span class="n">time_decoder</span> <span class="o">=</span> <span class="n">TimeDecoder</span><span class="p">(</span><span class="n">svm_clf</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Decoding
+We can now start to classify the EEG data (stored in time_features), given 2 conditions (e.g. ‘hits’ and ‘Correct rejects’)
+by using the decode method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">time_features</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">label_keys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="c1"># label_keys 1, 2 are the labels used for hits and correct_rejects respectively. You can see it with the label_dict argument</span>
+<span class="k">print</span><span class="p">(</span><span class="n">time_features</span><span class="o">.</span><span class="n">label_dict</span><span class="p">)</span>
+<span class="c1"># Run the decoding using multiples processors :</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">time_decoder</span><span class="o">.</span><span class="n">decode_mpver</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">time_features</span><span class="o">.</span><span class="n">label_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_plot_full_pipeline_example_001.png" class="align-center" src="../../_images/sphx_glr_plot_full_pipeline_example_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Hits&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;Correct rejects&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;Omissions&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;False Alarms&#39;</span><span class="p">}</span>
+<span class="mi">183</span> <span class="n">Hits</span> <span class="o">-</span> <span class="mi">173</span> <span class="n">Correct</span> <span class="n">rejects</span>
+<span class="n">Function</span> <span class="p">:</span> <span class="n">decode_mpver</span> <span class="o">-</span> <span class="n">Time</span> <span class="n">elapsed</span> <span class="p">:</span> <span class="mf">31.33400011062622</span>
+</pre></div>
+</div>
+<p>You can select data using the arguments of get_data method (see help(time_features.get_data))
+The possible selection arguments are feature_pos, feature_type, feature_channame, label_keys and time_points
+The current time_features instance contains the following channels :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">time_features</span><span class="o">.</span><span class="n">channel_names</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;EEG TP&#39;1-TP&#39;2&quot;</span> <span class="s2">&quot;EEG TP&#39;2-TP&#39;3&quot;</span> <span class="s2">&quot;EEG TP&#39;3-TP&#39;4&quot;</span> <span class="s2">&quot;EEG TP&#39;4-TP&#39;5&quot;</span>
+ <span class="s2">&quot;EEG TP&#39;5-TP&#39;6&quot;</span> <span class="s2">&quot;EEG TP&#39;6-TP&#39;7&quot;</span> <span class="s2">&quot;EEG TP&#39;7-TP&#39;8&quot;</span> <span class="s2">&quot;EEG TP&#39;8-TP&#39;9&quot;</span>
+ <span class="s2">&quot;EEG TP&#39;9-TP&#39;10&quot;</span> <span class="s2">&quot;EEG A&#39;1-A&#39;2&quot;</span> <span class="s2">&quot;EEG A&#39;2-A&#39;3&quot;</span> <span class="s2">&quot;EEG A&#39;4-A&#39;5&quot;</span> <span class="s2">&quot;EEG A&#39;5-A&#39;6&quot;</span>
+ <span class="s2">&quot;EEG B&#39;1-B&#39;2&quot;</span> <span class="s2">&quot;EEG B&#39;2-B&#39;3&quot;</span> <span class="s2">&quot;EEG B&#39;4-B&#39;5&quot;</span> <span class="s2">&quot;EEG B&#39;5-B&#39;6&quot;</span> <span class="s2">&quot;EEG C&#39;1-C&#39;2&quot;</span>
+ <span class="s2">&quot;EEG C&#39;2-C&#39;3&quot;</span> <span class="s2">&quot;EEG C&#39;3-C&#39;4&quot;</span> <span class="s2">&quot;EEG C&#39;4-C&#39;5&quot;</span> <span class="s2">&quot;EEG C&#39;5-C&#39;6&quot;</span> <span class="s2">&quot;EEG C&#39;6-C&#39;7&quot;</span>
+ <span class="s2">&quot;EEG C&#39;7-C&#39;8&quot;</span> <span class="s2">&quot;EEG C&#39;8-C&#39;9&quot;</span> <span class="s2">&quot;EEG C&#39;9-C&#39;10&quot;</span> <span class="s2">&quot;EEG C&#39;10-C&#39;11&quot;</span>
+ <span class="s2">&quot;EEG C&#39;11-C&#39;12&quot;</span> <span class="s2">&quot;EEG C&#39;12-C&#39;13&quot;</span> <span class="s2">&quot;EEG TB&#39;1-TB&#39;2&quot;</span> <span class="s2">&quot;EEG TB&#39;2-TB&#39;3&quot;</span>
+ <span class="s2">&quot;EEG TB&#39;3-TB&#39;4&quot;</span> <span class="s2">&quot;EEG TB&#39;4-TB&#39;5&quot;</span> <span class="s2">&quot;EEG TB&#39;5-TB&#39;6&quot;</span> <span class="s2">&quot;EEG TB&#39;6-TB&#39;7&quot;</span>
+ <span class="s2">&quot;EEG TB&#39;7-TB&#39;8&quot;</span> <span class="s2">&quot;EEG TB&#39;8-TB&#39;9&quot;</span> <span class="s2">&quot;EEG TB&#39;9-TB&#39;10&quot;</span> <span class="s2">&quot;EEG TB&#39;10-TB&#39;11&quot;</span>
+ <span class="s2">&quot;EEG TB&#39;11-TB&#39;12&quot;</span> <span class="s2">&quot;EEG TB&#39;12-TB&#39;13&quot;</span> <span class="s2">&quot;EEG TB&#39;13-TB&#39;14&quot;</span> <span class="s2">&quot;EEG T&#39;1-T&#39;2&quot;</span>
+ <span class="s2">&quot;EEG T&#39;2-T&#39;3&quot;</span> <span class="s2">&quot;EEG T&#39;3-T&#39;4&quot;</span> <span class="s2">&quot;EEG T&#39;4-T&#39;5&quot;</span> <span class="s2">&quot;EEG T&#39;5-T&#39;6&quot;</span> <span class="s2">&quot;EEG T&#39;6-T&#39;7&quot;</span>
+ <span class="s2">&quot;EEG GC&#39;1-GC&#39;2&quot;</span> <span class="s2">&quot;EEG GC&#39;2-GC&#39;3&quot;</span> <span class="s2">&quot;EEG GC&#39;16-GC&#39;17&quot;</span> <span class="s2">&quot;EEG GC&#39;17-GC&#39;18&quot;</span>
+ <span class="s2">&quot;EEG GC&#39;17-GC&#39;18&quot;</span> <span class="s2">&quot;EEG OR&#39;1-OR&#39;2&quot;</span> <span class="s2">&quot;EEG OR&#39;3-OR&#39;4&quot;</span> <span class="s2">&quot;EEG OR&#39;4-OR&#39;5&quot;</span>
+ <span class="s2">&quot;EEG OR&#39;5-OR&#39;6&quot;</span> <span class="s2">&quot;EEG OR&#39;6-OR&#39;7&quot;</span> <span class="s2">&quot;EEG OR&#39;7-OR&#39;8&quot;</span> <span class="s2">&quot;EEG OR&#39;8-OR&#39;9&quot;</span>
+ <span class="s2">&quot;EEG OR&#39;9-OR&#39;10&quot;</span> <span class="s2">&quot;EEG OR&#39;10-OR&#39;11&quot;</span> <span class="s2">&quot;EEG OR&#39;11-OR&#39;12&quot;</span> <span class="s2">&quot;EEG OR&#39;12-OR&#39;13&quot;</span>
+ <span class="s2">&quot;EEG OR&#39;13-OR&#39;14&quot;</span> <span class="s2">&quot;EEG OR&#39;14-OR&#39;15&quot;</span> <span class="s2">&quot;EEG OR&#39;15-OR&#39;16&quot;</span> <span class="s2">&quot;EEG OR&#39;16-OR&#39;17&quot;</span>
+ <span class="s1">&#39;EEG TP1-TP2&#39;</span> <span class="s1">&#39;EEG TP2-TP3&#39;</span> <span class="s1">&#39;EEG TP3-TP4&#39;</span> <span class="s1">&#39;EEG TP4-TP5&#39;</span> <span class="s1">&#39;EEG TP5-TP6&#39;</span>
+ <span class="s1">&#39;EEG TP6-TP7&#39;</span> <span class="s1">&#39;EEG TP7-TP8&#39;</span> <span class="s1">&#39;EEG TP8-TP9&#39;</span> <span class="s1">&#39;EEG TP9-TP10&#39;</span> <span class="s1">&#39;EEG TP10-TP11&#39;</span>
+ <span class="s1">&#39;EEG A 1-A 2&#39;</span> <span class="s1">&#39;EEG A 2-A 3&#39;</span> <span class="s1">&#39;EEG A 4-A 5&#39;</span> <span class="s1">&#39;EEG A 5-A 6&#39;</span> <span class="s1">&#39;EEG C 1-C 2&#39;</span>
+ <span class="s1">&#39;EEG C 2-C 3&#39;</span> <span class="s1">&#39;EEG C 4-C 5&#39;</span> <span class="s1">&#39;EEG C 5-C 6&#39;</span> <span class="s1">&#39;EEG TB1-TB2&#39;</span> <span class="s1">&#39;EEG TB2-TB3&#39;</span>
+ <span class="s1">&#39;EEG TB3-TB4&#39;</span> <span class="s1">&#39;EEG TB4-TB5&#39;</span> <span class="s1">&#39;EEG TB5-TB6&#39;</span> <span class="s1">&#39;EEG TB6-TB7&#39;</span> <span class="s1">&#39;EEG TB7-TB8&#39;</span>
+ <span class="s1">&#39;EEG TB8-TB9&#39;</span> <span class="s1">&#39;EEG TB9-TB10&#39;</span> <span class="s1">&#39;EEG TB10-TB11&#39;</span> <span class="s1">&#39;EEG TB11-TB12&#39;</span>
+ <span class="s1">&#39;EEG TB12-TB13&#39;</span> <span class="s1">&#39;EEG TB13-TB14&#39;</span> <span class="s1">&#39;EEG OR1-OR2&#39;</span> <span class="s1">&#39;EEG OR2-OR3&#39;</span> <span class="s1">&#39;EEG OR3-OR4&#39;</span>
+ <span class="s1">&#39;EEG OR4-OR5&#39;</span> <span class="s1">&#39;EEG OR5-OR6&#39;</span> <span class="s1">&#39;EEG OR6-OR7&#39;</span> <span class="s1">&#39;EEG OR7-OR8&#39;</span> <span class="s1">&#39;EEG OR13-OR14&#39;</span>
+ <span class="s1">&#39;EEG OR14-OR15&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>If we want to select only some channel, you can specify it with the feature_channame argument :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">time_features</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">feature_channame</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;C</span><span class="se">\&#39;</span><span class="s1">1-C</span><span class="se">\&#39;</span><span class="s1">2&#39;</span><span class="p">],</span> <span class="n">label_keys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">time_decoder</span><span class="o">.</span><span class="n">decode_mpver</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">time_features</span><span class="o">.</span><span class="n">label_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_plot_full_pipeline_example_002.png" class="align-center" src="../../_images/sphx_glr_plot_full_pipeline_example_002.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">183</span> <span class="n">Hits</span> <span class="o">-</span> <span class="mi">173</span> <span class="n">Correct</span> <span class="n">rejects</span>
+<span class="n">Function</span> <span class="p">:</span> <span class="n">decode_mpver</span> <span class="o">-</span> <span class="n">Time</span> <span class="n">elapsed</span> <span class="p">:</span> <span class="mf">7.257000207901001</span>
+</pre></div>
+</div>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  52.778 seconds)</p>
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/plot_full_pipeline_example.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_full_pipeline_example.py</span></code></a></div>
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/plot_full_pipeline_example.ipynb" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_full_pipeline_example.ipynb</span></code></a></div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, Martin Deudon.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

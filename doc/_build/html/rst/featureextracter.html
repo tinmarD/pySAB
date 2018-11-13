@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>featureextracter module &#8212; Sab Analysis 0 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/my-styles.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="pySAB" href="modules.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Sab Analysis</a>
+        <span class="navbar-text navbar-version pull-left"><b>0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="overview.rst.html">Overview</a></li>
+                <li><a href="modules.html">API</a></li>
+                <li><a href="../auto_examples/index.html">Examples</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pySAB</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">General Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#decoding-example">Decoding example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#erp-example">ERP example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#phase-utils-example">Phase Utils example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#time-features-examples">Time Features examples</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/rst/featureextracter.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">featureextracter module</a></li>
+</ul>
+
+  <li>
+    <a href="modules.html" title="Previous Chapter: pySAB"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; pySAB</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../_sources/rst/featureextracter.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-featureextracter">
+<span id="featureextracter-module"></span><h1>featureextracter module<a class="headerlink" href="#module-featureextracter" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="featureextracter.FeatureExtracter">
+<em class="property">class </em><code class="descclassname">featureextracter.</code><code class="descname">FeatureExtracter</code><span class="sig-paren">(</span><em>data_ori, srate, n_chan, n_pnts, n_trials, channel_names, tmin=0, tmax=[], freq_bands=[[2, 4], [4, 8], [8, 12], [15, 30], [30, 80]], freq_band_names=['Delta', 'Theta', 'Alpha', 'Beta', 'Gamma']</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.FeatureExtracter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Feature Extracter Class. Each Time Features object possess one instance. Used to extracted feature from the original
+data (amplitude usually). For frequency-based features, frequency bands of interest are defined (freq_bands) and
+the mean of the feature on these bands is computed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>data_ori</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Represents the amplitude data. Features are computed from this. Size : [n_chan, n_pnts, n_trials]</p>
+</dd>
+<dt><strong>srate</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Sampling rate (Hz)</p>
+</dd>
+<dt><strong>n_chan</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of channels in the data</p>
+</dd>
+<dt><strong>n_pnts</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of time points</p>
+</dd>
+<dt><strong>n_trials</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of trials</p>
+</dd>
+<dt><strong>tmin</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float (default 0)</span></dt>
+<dd><p class="first last">Starting time (s)</p>
+</dd>
+<dt><strong>tmax</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | None (default: None)</span></dt>
+<dd><p class="first last">Ending time (s). If none, is computed from the number of points and the sampling rate.</p>
+</dd>
+<dt><strong>channel_names</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Name of each channel</p>
+</dd>
+<dt><strong>freq_bands</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Array of shape (n_freq_bands * 2) which defined the frequency bands of interest. Mean value of the
+frequency-based features are computed over these bands.
+Default value is : [[2, 4], [4, 8], [8, 12], [15, 30], [30, 80]]</p>
+</dd>
+<dt><strong>freq_band_names</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Name of the frequency bands. Default value is [‘Delta’, ‘Theta’, ‘Alpha’, ‘Beta’, ‘Gamma’]</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.cwt_on_data" title="featureextracter.FeatureExtracter.cwt_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cwt_on_data</span></code></a>([wav_name,&nbsp;pfreqs,&nbsp;scale_type,&nbsp;…])</td>
+<td>Apply the Continous Wavelet Transform to the data <code class="docutils literal notranslate"><span class="pre">data_ori</span></code>, return both power and phase average over the frequency bands.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.dwt_on_data" title="featureextracter.FeatureExtracter.dwt_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dwt_on_data</span></code></a>(wav_name[,&nbsp;scale_type,&nbsp;…])</td>
+<td>Apply the Discrete Wavelet Transform on the data</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.filter_hilbert_on_data" title="featureextracter.FeatureExtracter.filter_hilbert_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_hilbert_on_data</span></code></a>(center_freq,&nbsp;bandwidth)</td>
+<td>Estimate the phase of the data <code class="docutils literal notranslate"><span class="pre">data_ori</span></code> using band-pass filtering and the Hilbert transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.stft_on_data" title="featureextracter.FeatureExtracter.stft_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stft_on_data</span></code></a>([win_name,&nbsp;win_dur,&nbsp;overlap,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="68%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>bandpower_on_data</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="featureextracter.FeatureExtracter.bandpower_on_data">
+<code class="descname">bandpower_on_data</code><span class="sig-paren">(</span><em>filt_type='butterworth'</em>, <em>filt_order=3</em>, <em>scale_type=[]</em>, <em>base_tstart=[]</em>, <em>base_tend=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.FeatureExtracter.bandpower_on_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="featureextracter.FeatureExtracter.cwt_on_data">
+<code class="descname">cwt_on_data</code><span class="sig-paren">(</span><em>wav_name=[]</em>, <em>pfreqs=[]</em>, <em>scale_type=[]</em>, <em>base_tstart=[]</em>, <em>base_tend=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.FeatureExtracter.cwt_on_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the Continous Wavelet Transform to the data <code class="docutils literal notranslate"><span class="pre">data_ori</span></code>, return both power and phase average over the
+frequency bands. Uses the <a class="reference external" href="https://pywavelets.readthedocs.io/en/latest/">PyWavelets module</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>wav_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Wavelet name</p>
+</dd>
+<dt><strong>pfreqs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Pseudo frequency array to use for computing power and phase</p>
+</dd>
+<dt><strong>scale_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first">Scaling type. Can be :</p>
+<ul class="last simple">
+<li>‘db_ratio’ : <span class="math notranslate nohighlight">\(P_{norm} = 10 \cdot log10(\frac{P}{mean(P_{baseline})})\)</span></li>
+<li>‘percent_change’ : <span class="math notranslate nohighlight">\(P_{norm} = 100 \cdot \frac{P - mean(P_{baseline})}{mean(P_{baseline})}\)</span></li>
+<li>‘z_transform’ : <span class="math notranslate nohighlight">\(P_{norm} = \frac{P - mean(P_{baseline})}{std(P_{baseline})}\)</span></li>
+</ul>
+</dd>
+<dt><strong>base_tstart</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Baseline starting point (in sample)</p>
+</dd>
+<dt><strong>base_tend</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Baseline ending point (in sample)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="featureextracter.FeatureExtracter.dwt_on_data">
+<code class="descname">dwt_on_data</code><span class="sig-paren">(</span><em>wav_name</em>, <em>scale_type=[]</em>, <em>base_tstart=[]</em>, <em>base_tend=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.FeatureExtracter.dwt_on_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the Discrete Wavelet Transform on the data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>wav_name</strong></dt>
+<dd><p class="first last">scale_type : str</p>
+</dd>
+<dt><strong>scale_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first">Scaling type. Can be :</p>
+<ul class="last simple">
+<li>‘db_ratio’ : <span class="math notranslate nohighlight">\(P_{norm} = 10 \cdot log10(\frac{P}{mean(P_{baseline})})\)</span></li>
+<li>‘percent_change’ : <span class="math notranslate nohighlight">\(P_{norm} = 100 \cdot \frac{P - mean(P_{baseline})}{mean(P_{baseline})}\)</span></li>
+<li>‘z_transform’ : <span class="math notranslate nohighlight">\(P_{norm} = \frac{P - mean(P_{baseline})}{std(P_{baseline})}\)</span></li>
+</ul>
+</dd>
+<dt><strong>base_tstart</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Baseline starting point (in sample)</p>
+</dd>
+<dt><strong>base_tend</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Baseline ending point (in sample)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="featureextracter.FeatureExtracter.filter_hilbert_on_data">
+<code class="descname">filter_hilbert_on_data</code><span class="sig-paren">(</span><em>center_freq</em>, <em>bandwidth</em>, <em>ftype='elliptic'</em>, <em>forder=4</em>, <em>f_tolerance=[]</em>, <em>noise_tolerance=[]</em>, <em>n_monte_carlo=5</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.FeatureExtracter.filter_hilbert_on_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate the phase of the data <code class="docutils literal notranslate"><span class="pre">data_ori</span></code> using band-pass filtering and the Hilbert transform. The cos
+and sin of the phase angle are returned, the phase angle is 2-pi periodic, thus cannot be used directly as a
+feature in a classification or regression task.
+see <a class="reference internal" href="phase_utils.html#phase_utils.compute_robust_estimation" title="phase_utils.compute_robust_estimation"><code class="xref py py-func docutils literal notranslate"><span class="pre">phase_utils.compute_robust_estimation()</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>center_freq</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Center frequency (in Hz) of the band-pass filters</p>
+</dd>
+<dt><strong>bandwidth</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Bandwidth (in Hz) of the band-pass filters</p>
+</dd>
+<dt><strong>ftype</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first">Filter type:</p>
+<ul class="last simple">
+<li>‘butter’ : Butterworth filter</li>
+<li>‘elliptic’ (default) : Elliptic filter</li>
+<li>‘fir’ : Finite Impulse Response filter</li>
+</ul>
+</dd>
+<dt><strong>forder</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Filter order - default : 4</p>
+</dd>
+<dt><strong>f_tolerance</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Tolerance of the cut-off frequencies. A random number in the interval [-f_tolerance/2, +f_tolerance/2] will be
+added to the cut-off frequencies</p>
+</dd>
+<dt><strong>noise_tolerance</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Random noise from a uniform distribution in [-noise_tolerance/2, +noise_tolerance/2] will be added to the signal
+x_raw</p>
+</dd>
+<dt><strong>n_monte_carlo</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of monte carlo repetition</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="featureextracter.FeatureExtracter.stft_on_data">
+<code class="descname">stft_on_data</code><span class="sig-paren">(</span><em>win_name='hamming'</em>, <em>win_dur=0.2</em>, <em>overlap=0.85</em>, <em>nfft=[]</em>, <em>scale_type=[]</em>, <em>base_tstart=[]</em>, <em>base_tend=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.FeatureExtracter.stft_on_data" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>win_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘hamming’)</span></dt>
+<dd><p class="first last">Window’s name</p>
+</dd>
+<dt><strong>win_dur</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float (default: 0.2)</span></dt>
+<dd><p class="first last">Window’s duration (s)</p>
+</dd>
+<dt><strong>overlap</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Overlap - must be between 0 and 1 - Default: 0.85</p>
+</dd>
+<dt><strong>nfft</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | None (default: None)</span></dt>
+<dd><p class="first last">Number of frequencies used in the FFT</p>
+</dd>
+<dt><strong>scale_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first">Scaling type. Can be :</p>
+<ul class="last simple">
+<li>‘db_ratio’ : <span class="math notranslate nohighlight">\(P_{norm} = 10 \cdot log10(\frac{P}{mean(P_{baseline})})\)</span></li>
+<li>‘percent_change’ : <span class="math notranslate nohighlight">\(P_{norm} = 100 \cdot \frac{P - mean(P_{baseline})}{mean(P_{baseline})}\)</span></li>
+<li>‘z_transform’ : <span class="math notranslate nohighlight">\(P_{norm} = \frac{P - mean(P_{baseline})}{std(P_{baseline})}\)</span></li>
+</ul>
+</dd>
+<dt><strong>base_tstart</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Baseline starting point (in sample)</p>
+</dd>
+<dt><strong>base_tend</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Baseline ending point (in sample)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="featureextracter.bandpower_1d">
+<code class="descclassname">featureextracter.</code><code class="descname">bandpower_1d</code><span class="sig-paren">(</span><em>x</em>, <em>srate</em>, <em>freq_bands</em>, <em>filt_type='butterworth'</em>, <em>filt_order=3</em>, <em>scale_type=[]</em>, <em>base_tstart=[]</em>, <em>base_tend=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.bandpower_1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the power of input signal <code class="docutils literal notranslate"><span class="pre">x</span></code> in the different frequency bands defined by <code class="docutils literal notranslate"><span class="pre">freq_bands</span></code>. Signal <code class="docutils literal notranslate"><span class="pre">x</span></code>
+is first passed through a band-pass filter specified by <code class="docutils literal notranslate"><span class="pre">filt_type</span></code> and <code class="docutils literal notranslate"><span class="pre">filt_order</span></code>, output amplitude is then
+squared to get the power and the envelope is computed using the Hilbert transform</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="featureextracter.compute_band_mean">
+<code class="descclassname">featureextracter.</code><code class="descname">compute_band_mean</code><span class="sig-paren">(</span><em>data</em>, <em>freqs</em>, <em>freq_bands</em>, <em>interp_method='linear'</em>, <em>freqs_interp=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.compute_band_mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the mean of <code class="docutils literal notranslate"><span class="pre">data</span></code> over the frequency bands defined by <code class="docutils literal notranslate"><span class="pre">freq_bands</span></code>. The original <code class="docutils literal notranslate"><span class="pre">data</span></code> array
+of shape [n_freqs * n_pnts] is first interpolated along the frequency axis before computing the mean.
+The new frequency values can be specified by the <code class="docutils literal notranslate"><span class="pre">freqs_interp</span></code> parameter. By default the <code class="docutils literal notranslate"><span class="pre">freqs_interp</span></code>
+parameter add 3 equally spaced points between each original frequency value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>data</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array (size: n_freqs * n_pnts)</span></dt>
+<dd><p class="first last">Time-frequency data</p>
+</dd>
+<dt><strong>freqs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array (size: n_freqs)</span></dt>
+<dd><p class="first last">Frequencies in <code class="docutils literal notranslate"><span class="pre">data</span></code> (in Hz)</p>
+</dd>
+<dt><strong>freq_bands</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array (size: n_freq_bands * 2)</span></dt>
+<dd><p class="first last">Frequency bands of interest. Mean value are calculated on these bands.</p>
+</dd>
+<dt><strong>interp_method</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘linear’)</span></dt>
+<dd><p class="first last">Specifies the kind of interpolation as a string (‘linear’, ‘nearest’, ‘zero’, ‘slinear’, ‘quadratic’, ‘cubic’)
+See :func: <cite>scipy.interpolate.interp1d</cite></p>
+</dd>
+<dt><strong>freqs_interp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array | None (default: none)</span></dt>
+<dd><p class="first last">Frequencies (in Hz) used for interpolation. If none, 3 equally spaced frequency points are added between each
+original frequency value.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>data_band_mean</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array (size: n_freq_bands * n_pnts)</span></dt>
+<dd><p class="first last">Mean of the data over the frequency bands</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="featureextracter.cwt_1d">
+<code class="descclassname">featureextracter.</code><code class="descname">cwt_1d</code><span class="sig-paren">(</span><em>x</em>, <em>srate</em>, <em>freq_bands</em>, <em>freqs=array([ 3.</em>, <em>3.273378</em>, <em>3.57166783</em>, <em>3.89713963</em>, <em>4.25227037</em>, <em>4.63976276</em>, <em>5.06256577</em>, <em>5.52389713</em>, <em>6.02726778</em>, <em>6.57650857</em>, <em>7.17579948</em>, <em>7.82970137</em>, <em>8.54319073</em>, <em>9.32169752</em>, <em>10.17114651</em>, <em>11.0980024</em>, <em>12.10931895</em>, <em>13.21279273</em>, <em>14.41682166</em>, <em>15.73056893</em>, <em>17.16403273</em>, <em>18.72812235</em>, <em>20.43474121</em>, <em>22.2968774</em>, <em>24.32870262</em>, <em>26.54567994</em>, <em>28.96468154</em>, <em>31.60411707</em>, <em>34.48407379</em>, <em>37.62646946</em>, <em>41.05521906</em>, <em>44.79641689</em>, <em>48.87853512</em>, <em>53.33264044</em>, <em>58.19263056</em>, <em>63.49549213</em>, <em>69.28158225</em>, <em>75.59493562</em>, <em>82.48359962</em>, <em>90.        ])</em>, <em>n_cycles=array([ 1.</em>, <em>1.06081836</em>, <em>1.12533558</em>, <em>1.19377664</em>, <em>1.26638017</em>, <em>1.34339933</em>, <em>1.42510267</em>, <em>1.51177507</em>, <em>1.60371874</em>, <em>1.70125428</em>, <em>1.80472177</em>, <em>1.91448198</em>, <em>2.03091762</em>, <em>2.15443469</em>, <em>2.28546386</em>, <em>2.42446202</em>, <em>2.57191381</em>, <em>2.72833338</em>, <em>2.89426612</em>, <em>3.07029063</em>, <em>3.25702066</em>, <em>3.45510729</em>, <em>3.66524124</em>, <em>3.88815518</em>, <em>4.12462638</em>, <em>4.37547938</em>, <em>4.64158883</em>, <em>4.92388263</em>, <em>5.22334507</em>, <em>5.54102033</em>, <em>5.87801607</em>, <em>6.23550734</em>, <em>6.61474064</em>, <em>7.01703829</em>, <em>7.44380301</em>, <em>7.89652287</em>, <em>8.3767764</em>, <em>8.88623816</em>, <em>9.42668455</em>, <em>10.        ])</em>, <em>scale_type=[]</em>, <em>base_tstart=[]</em>, <em>base_tend=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.cwt_1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the Continuous Wavelet Transform for a 1 dimension input array <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>x</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Input array - must have 1 dimension</p>
+</dd>
+<dt><strong>srate</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Sampling frequency</p>
+</dd>
+<dt><strong>freq_bands</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array (size: n_freq_bands * 2)</span></dt>
+<dd><p class="first last">Frequency bands of interest. Mean value of both power and phase are calculated on these bands.</p>
+</dd>
+<dt><strong>freqs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Pseudo frequency array to use for computing power and phase</p>
+</dd>
+<dt><strong>n_cycles</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | array</span></dt>
+<dd><p class="first last">Number of cycles for each wavelet</p>
+</dd>
+<dt><strong>scale_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first">Scaling type. Can be :</p>
+<ul class="last simple">
+<li>‘db_ratio’ : <span class="math notranslate nohighlight">\(P_{norm} = 10 \cdot log10(\frac{P}{mean(P_{baseline})})\)</span></li>
+<li>‘percent_change’ : <span class="math notranslate nohighlight">\(P_{norm} = 100 \cdot \frac{P - mean(P_{baseline})}{mean(P_{baseline})}\)</span></li>
+<li>‘z_transform’ : <span class="math notranslate nohighlight">\(P_{norm} = \frac{P - mean(P_{baseline})}{std(P_{baseline})}\)</span></li>
+</ul>
+</dd>
+<dt><strong>base_tstart</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Baseline starting point (in sample)</p>
+</dd>
+<dt><strong>base_tend</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Baseline ending point (in sample)</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>coeffs_power</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array (size: n_freqs * n_pnts)</span></dt>
+<dd><p class="first last">Power extracted from the wavelet coefficients</p>
+</dd>
+<dt><strong>coeffs_power_bands</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array (size: n_freq_bands * n_pnts)</span></dt>
+<dd><p class="first last">Mean of <code class="docutils literal notranslate"><span class="pre">coeffs_power</span></code> over the frequency bands defined in <code class="docutils literal notranslate"><span class="pre">freq_bands</span></code></p>
+</dd>
+<dt><strong>phase</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array (size: n_freqs * n_pnts)</span></dt>
+<dd><p class="first last">Phase angle</p>
+</dd>
+<dt><strong>phase_bands</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array (size: n_freq_bands * n_pnts)</span></dt>
+<dd><p class="first last">Mean of <code class="docutils literal notranslate"><span class="pre">phase</span></code> over the frequency bands defined in <code class="docutils literal notranslate"><span class="pre">freq_bands</span></code></p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="featureextracter.dwt_1d">
+<code class="descclassname">featureextracter.</code><code class="descname">dwt_1d</code><span class="sig-paren">(</span><em>x</em>, <em>srate</em>, <em>wav_name</em>, <em>do_plot=0</em>, <em>scale_type=[]</em>, <em>base_tstart=[]</em>, <em>base_tend=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.dwt_1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Discrete wavelet transform for input 1D array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>x</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Input 1D array</p>
+</dd>
+<dt><strong>srate</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Sampling rate (Hz)</p>
+</dd>
+<dt><strong>wav_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Wavelet name</p>
+</dd>
+<dt><strong>do_plot</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, plot the results</p>
+</dd>
+<dt><strong>scale_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Normalization type - can be ‘db_ratio’, ‘percent_change’, or ‘z_transform’</p>
+</dd>
+<dt><strong>base_tstart</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Baseline starting time (s)</p>
+</dd>
+<dt><strong>base_tend</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Baseline ending time (s)</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>coeffs_upsampled, pfreq_bands</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="featureextracter.get_bandpass_filter">
+<code class="descclassname">featureextracter.</code><code class="descname">get_bandpass_filter</code><span class="sig-paren">(</span><em>srate</em>, <em>cutoff_freqs</em>, <em>filt_type='butterworth'</em>, <em>filt_order=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.get_bandpass_filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="featureextracter.stft_1d">
+<code class="descclassname">featureextracter.</code><code class="descname">stft_1d</code><span class="sig-paren">(</span><em>x</em>, <em>srate</em>, <em>freq_bands</em>, <em>win_name='hamming'</em>, <em>win_dur=[]</em>, <em>overlap=0.9</em>, <em>nfft=256</em>, <em>fmin=[]</em>, <em>scale_type=[]</em>, <em>base_tstart=[]</em>, <em>base_tend=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.stft_1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the short-time Fourier transform</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>x</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><blockquote class="first">
+<div><p>Input vector</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>srate <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Sampling frequency (Hz)</p>
+</dd>
+<dt>freq_bands <span class="classifier-delimiter">:</span> <span class="classifier">array (size: n_freq_bands * 2)</span></dt>
+<dd><p class="first last">Frequency bands of interest. Mean value of both power and phase are calculated on these bands.</p>
+</dd>
+<dt>win_name <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘hamming’)</span></dt>
+<dd><p class="first last">Window’s name</p>
+</dd>
+<dt>win_dur <span class="classifier-delimiter">:</span> <span class="classifier">float (default: [])</span></dt>
+<dd><p class="first last">Window’s duration (s)</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>overlap</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><blockquote class="first">
+<div><p>Overlap - must be between 0 and 1 - Default: 0.9</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>nfft <span class="classifier-delimiter">:</span> <span class="classifier">int | None (default: 256)</span></dt>
+<dd><p class="first last">Number of frequencies used in the FFT</p>
+</dd>
+<dt>fmin <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Starting frequency</p>
+</dd>
+<dt>scale_type <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Normalization type - can be ‘db_ratio’, ‘percent_change’, or ‘z_transform’</p>
+</dd>
+<dt>base_tstart <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Baseline starting time (s)</p>
+</dd>
+<dt>base_tend <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Baseline ending time (s)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>pxx, pxx_bands_interp, phase_bands_interp</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="featureextracter.tf_scaling">
+<code class="descclassname">featureextracter.</code><code class="descname">tf_scaling</code><span class="sig-paren">(</span><em>tf_power_mat</em>, <em>base_ind_start</em>, <em>base_ind_end</em>, <em>scale_type</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.tf_scaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale / Normalize the time-frequency map given the baseline time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>tf_power_mat</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array (size n_channels * n_pnts)</span></dt>
+<dd><p class="first last">Time frequency matrix</p>
+</dd>
+<dt><strong>base_ind_start</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Baseline starting point (in sample)</p>
+</dd>
+<dt><strong>base_ind_end</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Baseline ending point (in sample).</p>
+</dd>
+<dt><strong>scale_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first">Scaling type. Can be :</p>
+<ul class="last simple">
+<li>‘db_ratio’ : <span class="math notranslate nohighlight">\(P_{norm} = 10 \cdot log10(\frac{P}{mean(P_{baseline})})\)</span></li>
+<li>‘percent_change’ : <span class="math notranslate nohighlight">\(P_{norm} = 100 \cdot \frac{P - mean(P_{baseline})}{mean(P_{baseline})}\)</span></li>
+<li>‘z_transform’ : <span class="math notranslate nohighlight">\(P_{norm} = \frac{P - mean(P_{baseline})}{std(P_{baseline})}\)</span></li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>tf_power_mat_norm</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Normalized time-frequency map</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="featureextracter.zero_tf_edges">
+<code class="descclassname">featureextracter.</code><code class="descname">zero_tf_edges</code><span class="sig-paren">(</span><em>tf_mat</em>, <em>fs</em>, <em>freqs</em>, <em>n_period=2</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.zero_tf_edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, Martin Deudon.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

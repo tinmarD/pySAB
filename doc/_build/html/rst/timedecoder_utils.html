@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>timedecoder_utils module &#8212; Sab Analysis 0 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/my-styles.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="timefeatures module" href="timefeatures.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Sab Analysis</a>
+        <span class="navbar-text navbar-version pull-left"><b>0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="overview.rst.html">Overview</a></li>
+                <li><a href="modules.html">API</a></li>
+                <li><a href="../auto_examples/index.html">Examples</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pySAB</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">General Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#decoding-example">Decoding example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#erp-example">ERP example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#phase-utils-example">Phase Utils example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#time-features-examples">Time Features examples</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/rst/timedecoder_utils.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">timedecoder_utils module</a></li>
+</ul>
+
+  <li>
+    <a href="timefeatures.html" title="Next Chapter: timefeatures module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">timefeatures module &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../_sources/rst/timedecoder_utils.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-timedecoder_utils">
+<span id="timedecoder-utils-module"></span><h1>timedecoder_utils module<a class="headerlink" href="#module-timedecoder_utils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="timedecoder_utils.decode_time_step">
+<code class="descclassname">timedecoder_utils.</code><code class="descname">decode_time_step</code><span class="sig-paren">(</span><em>X_i</em>, <em>y</em>, <em>y_dict</em>, <em>clf</em>, <em>scaler</em>, <em>n_splits=5</em>, <em>sampler=[]</em>, <em>do_pca=False</em>, <em>n_components=0.95</em>, <em>permute_train_labels=False</em>, <em>compute_auc=False</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder_utils.decode_time_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a classification of data <code class="docutils literal notranslate"><span class="pre">X_i</span></code> with labels <code class="docutils literal notranslate"><span class="pre">y</span></code> using a Stratified K-Folds cross-validation
+where <code class="docutils literal notranslate"><span class="pre">n_splits</span></code> is the number of folds.
+Classification pipeline, for each one of the Stratified K-Folds :</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>If <code class="docutils literal notranslate"><span class="pre">do_pca</span></code> is True, first do a standardization scaling and then apply PCA and keep only the first <code class="docutils literal notranslate"><span class="pre">n_components</span></code></li>
+<li>Apply the <code class="docutils literal notranslate"><span class="pre">scaler</span></code>. Fit the transform on the training set and apply it on the test set</li>
+<li>Resample the train set so that the train set is balanced between classes, using the <code class="docutils literal notranslate"><span class="pre">sampler</span></code> argument</li>
+<li>Train the classifier on the train set (If <code class="docutils literal notranslate"><span class="pre">permute_train_labels</span></code> is True, permute the training labels first)</li>
+<li>Predict labels on the test set</li>
+<li>Evaluate the performances with several scores</li>
+</ol>
+</div></blockquote>
+<p>See also <a class="reference internal" href="timedecoder.html#timedecoder.TimeDecoder.decode" title="timedecoder.TimeDecoder.decode"><code class="xref py py-func docutils literal notranslate"><span class="pre">timedecoder.TimeDecoder.decode()</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X_i</strong> <span class="classifier-delimiter">:</span> <span class="classifier">2D array [n_features, n_trials]</span></dt>
+<dd><p class="first last">Feature array</p>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array [n_trials]</span></dt>
+<dd><p class="first last">Label of each trial in <code class="docutils literal notranslate"><span class="pre">X_i</span></code></p>
+</dd>
+<dt><strong>y_dict</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Label dictionnary</p>
+</dd>
+<dt><strong>clf</strong> <span class="classifier-delimiter">:</span> <span class="classifier">sklearn classifier</span></dt>
+<dd><p class="first last">Scikit-Learn classifier</p>
+</dd>
+<dt><strong>scaler</strong> <span class="classifier-delimiter">:</span> <span class="classifier">sklearn scaler</span></dt>
+<dd><p class="first last">Scikit-Learn scaler</p>
+</dd>
+<dt><strong>n_splits</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of folds for the Stratified K-Folds cross-validation</p>
+</dd>
+<dt><strong>sampler</strong> <span class="classifier-delimiter">:</span> <span class="classifier">sklearn sampler</span></dt>
+<dd><p class="first last">Scikit learn sampler - see <a class="reference internal" href="timedecoder.html#timedecoder.get_sampler" title="timedecoder.get_sampler"><code class="xref py py-func docutils literal notranslate"><span class="pre">timedecoder.get_sampler()</span></code></a></p>
+</dd>
+<dt><strong>do_pca</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, apply a PCA decomposition and keep only a certain amount of components given <code class="docutils literal notranslate"><span class="pre">n_components</span></code></p>
+</dd>
+<dt><strong>n_components</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | float</span></dt>
+<dd><p class="first last">Number of components to keep when running the PCA
+If <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;</span> <span class="pre">n_components</span> <span class="pre">&lt;</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">svd_solver</span> <span class="pre">==</span> <span class="pre">'full'</span></code>, select the
+number of components such that the amount of variance that needs to be
+explained is greater than the percentage specified by n_components.</p>
+</dd>
+<dt><strong>permute_train_labels</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, permute the training labels. Used for computing the chance level.</p>
+</dd>
+<dt><strong>compute_auc</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, will try to compute the Area Under the Curve score</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>accuracy_mean</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Accuracy, mean over the K-folds</p>
+</dd>
+<dt><strong>f1_mean</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">F1-score, mean over the K-folds</p>
+</dd>
+<dt><strong>precision_mean</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Precision, mean over the K-folds</p>
+</dd>
+<dt><strong>recall_mean</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Recall, mean over the K-folds</p>
+</dd>
+<dt><strong>class_acc_mean</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array [n_classes]</span></dt>
+<dd><p class="first last">Class-accuracy for each class, mean over the K-folds</p>
+</dd>
+<dt><strong>auc_mean</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Area under the curve, mean over the K-folds</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="timedecoder_utils.temporal_generalization_step">
+<code class="descclassname">timedecoder_utils.</code><code class="descname">temporal_generalization_step</code><span class="sig-paren">(</span><em>X</em>, <em>i_time</em>, <em>y</em>, <em>y_dict</em>, <em>clf</em>, <em>scaler</em>, <em>n_splits=5</em>, <em>sampler=[]</em>, <em>do_pca=False</em>, <em>n_components=0.95</em>, <em>permute_train_labels=False</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder_utils.temporal_generalization_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporal generalization step.
+Train at time <code class="docutils literal notranslate"><span class="pre">i_time</span></code> and test for all time points. Use a stratified K-folds cross validation.</p>
+<dl class="docutils">
+<dt>Pipeline, for each stratified K-folds:</dt>
+<dd><ol class="first arabic simple">
+<li>If <code class="docutils literal notranslate"><span class="pre">do_pca</span></code> is True, first do a standardization scaling and then apply PCA and keep only the first <code class="docutils literal notranslate"><span class="pre">n_components</span></code> on the train set</li>
+<li>Apply the <code class="docutils literal notranslate"><span class="pre">scaler</span></code>. Fit the transform on the training set</li>
+<li>Resample the train set so that the train set is balanced between classes, using the <code class="docutils literal notranslate"><span class="pre">sampler</span></code> argument</li>
+<li>Train the classifier on the train set (If <code class="docutils literal notranslate"><span class="pre">permute_train_labels</span></code> is True, permute the training labels first)</li>
+<li>For each time point :</li>
+</ol>
+<blockquote class="last">
+<div><ul class="simple">
+<li>If <code class="docutils literal notranslate"><span class="pre">do_pca</span></code> is True, do a standardization scaling and then apply PCA on the test set</li>
+<li>Apply the <code class="docutils literal notranslate"><span class="pre">scaler</span></code> on the test set</li>
+<li>Predict labels on the test set</li>
+<li>Evaluate the performances with several scores</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+<p>See also <a class="reference internal" href="timedecoder.html#timedecoder.TimeDecoder.temporal_generalization" title="timedecoder.TimeDecoder.temporal_generalization"><code class="xref py py-func docutils literal notranslate"><span class="pre">timedecoder.TimeDecoder.temporal_generalization()</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">3D array [n_features, n_pnts, n_trials]</span></dt>
+<dd><p class="first last">Temporal feature array</p>
+</dd>
+<dt><strong>i_time</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Training time point</p>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array [n_trials]</span></dt>
+<dd><p class="first last">Label array</p>
+</dd>
+<dt><strong>y_dict</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Label dictionnary</p>
+</dd>
+<dt><strong>clf</strong> <span class="classifier-delimiter">:</span> <span class="classifier">sklearn classifier</span></dt>
+<dd><p class="first last">Scikit-Learn classifier</p>
+</dd>
+<dt><strong>scaler</strong> <span class="classifier-delimiter">:</span> <span class="classifier">sklearn scaler</span></dt>
+<dd><p class="first last">Scikit-Learn scaler</p>
+</dd>
+<dt><strong>n_splits</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of folds for the Stratified K-Folds cross-validation</p>
+</dd>
+<dt><strong>sampler</strong> <span class="classifier-delimiter">:</span> <span class="classifier">sklearn sampler</span></dt>
+<dd><p class="first last">Scikit learn sampler - see <a class="reference internal" href="timedecoder.html#timedecoder.get_sampler" title="timedecoder.get_sampler"><code class="xref py py-func docutils literal notranslate"><span class="pre">timedecoder.get_sampler()</span></code></a></p>
+</dd>
+<dt><strong>do_pca</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, apply a PCA decomposition and keep only a certain amount of components given <code class="docutils literal notranslate"><span class="pre">n_components</span></code></p>
+</dd>
+<dt><strong>n_components</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | float</span></dt>
+<dd><p class="first last">Number of components to keep when running the PCA
+If <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;</span> <span class="pre">n_components</span> <span class="pre">&lt;</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">svd_solver</span> <span class="pre">==</span> <span class="pre">'full'</span></code>, select the
+number of components such that the amount of variance that needs to be
+explained is greater than the percentage specified by n_components.</p>
+</dd>
+<dt><strong>permute_train_labels</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, permute the training labels. Used for computing the chance level.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>accuracy_mean</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Accuracy, mean over the K-folds</p>
+</dd>
+<dt><strong>class_acc_mean</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array [n_classes]</span></dt>
+<dd><p class="first last">Class-accuracy for each class, mean over the K-folds</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, Martin Deudon.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

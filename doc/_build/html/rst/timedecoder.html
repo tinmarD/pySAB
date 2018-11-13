@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>timedecoder module &#8212; Sab Analysis 0 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/my-styles.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Sab Analysis</a>
+        <span class="navbar-text navbar-version pull-left"><b>0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="overview.rst.html">Overview</a></li>
+                <li><a href="modules.html">API</a></li>
+                <li><a href="../auto_examples/index.html">Examples</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pySAB</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">General Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#decoding-example">Decoding example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#erp-example">ERP example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#phase-utils-example">Phase Utils example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#time-features-examples">Time Features examples</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/rst/timedecoder.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">timedecoder module</a></li>
+</ul>
+
+<div id="sourcelink">
+  <a href="../_sources/rst/timedecoder.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-timedecoder">
+<span id="timedecoder-module"></span><h1>timedecoder module<a class="headerlink" href="#module-timedecoder" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="timedecoder.TimeDecoder">
+<em class="property">class </em><code class="descclassname">timedecoder.</code><code class="descname">TimeDecoder</code><span class="sig-paren">(</span><em>classifier</em>, <em>scaling='normalization'</em>, <em>do_pca=0</em>, <em>n_components=0.95</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder.TimeDecoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class representing a Decoding/MVPA/Classification pipeline
+This decoding works with 3D data having a temporal dimension.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>clf</strong> <span class="classifier-delimiter">:</span> <span class="classifier">sklearn model</span></dt>
+<dd><p class="first last">Scikit learn classification model</p>
+</dd>
+<dt><strong>clf_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Classification model name</p>
+</dd>
+<dt><strong>scaler_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><dl class="first last docutils">
+<dt>Scaling method. Possibles values :</dt>
+<dd><ul class="first last simple">
+<li>‘standardization’ : <code class="xref py py-class docutils literal notranslate"><span class="pre">sklearn.preprocessing.StandardScaler</span></code> - Standardize features by removing the mean and scaling to unit variance</li>
+<li>‘normalization’ : <code class="xref py py-class docutils literal notranslate"><span class="pre">sklearn.preprocessing.MinMaxScaler</span></code> - Transforms features by scaling each feature to a given range</li>
+<li>‘robust’ : <code class="xref py py-class docutils literal notranslate"><span class="pre">sklearn.preprocessing.RobustScaler</span></code> - Scale features using statistics that are robust to outliers</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt><strong>scaler</strong> <span class="classifier-delimiter">:</span> <span class="classifier">sklearn Scaler</span></dt>
+<dd><p class="first last">Scikit-Learn scaler</p>
+</dd>
+<dt><strong>do_pca</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, will run a PCA and keep only the first components given the <code class="docutils literal notranslate"><span class="pre">n_components</span></code> attribute</p>
+</dd>
+<dt><strong>n_components</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int, float, None or string</span></dt>
+<dd><p class="first">Number of components to keep.
+if n_components is not set all components are kept:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n_components</span> <span class="o">==</span> <span class="nb">min</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;</span> <span class="pre">n_components</span> <span class="pre">&lt;</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">svd_solver</span> <span class="pre">==</span> <span class="pre">'full'</span></code>, select the
+number of components such that the amount of variance that needs to be
+explained is greater than the percentage specified by n_components.
+If <code class="docutils literal notranslate"><span class="pre">svd_solver</span> <span class="pre">==</span> <span class="pre">'arpack'</span></code>, the number of components must be
+strictly less than the minimum of n_features and n_samples.
+Hence, the None case results in:</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n_components</span> <span class="o">==</span> <span class="nb">min</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#timedecoder.TimeDecoder.decode" title="timedecoder.TimeDecoder.decode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decode</span></code></a>(X,&nbsp;y,&nbsp;y_dict[,&nbsp;n_splits,&nbsp;n_iter,&nbsp;…])</td>
+<td>Do the temporal decoding of 3D data <code class="docutils literal notranslate"><span class="pre">X</span></code> given labels <code class="docutils literal notranslate"><span class="pre">y</span></code> For each time point, run</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#timedecoder.TimeDecoder.decode_mpver" title="timedecoder.TimeDecoder.decode_mpver"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decode_mpver</span></code></a>(X,&nbsp;y,&nbsp;y_dict[,&nbsp;n_splits,&nbsp;…])</td>
+<td>Do the temporal decoding of 3D data <code class="docutils literal notranslate"><span class="pre">X</span></code> given labels <code class="docutils literal notranslate"><span class="pre">y</span></code> - Multiprocesses version</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#timedecoder.TimeDecoder.plot_scores" title="timedecoder.TimeDecoder.plot_scores"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_scores</span></code></a>(scores,&nbsp;y_dict,&nbsp;n_iter,&nbsp;…[,&nbsp;…])</td>
+<td>Plot the decoding performances measures listed in <code class="docutils literal notranslate"><span class="pre">scores</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#timedecoder.TimeDecoder.single_feature_decoding" title="timedecoder.TimeDecoder.single_feature_decoding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">single_feature_decoding</span></code></a>(X,&nbsp;y,&nbsp;y_dict[,&nbsp;…])</td>
+<td>Apply the classifier on each feature separately.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#timedecoder.TimeDecoder.temporal_generalization" title="timedecoder.TimeDecoder.temporal_generalization"><code class="xref py py-obj docutils literal notranslate"><span class="pre">temporal_generalization</span></code></a>(X,&nbsp;y,&nbsp;y_dict[,&nbsp;…])</td>
+<td>Temporal Generalisation.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="timedecoder.TimeDecoder.decode">
+<code class="descname">decode</code><span class="sig-paren">(</span><em>X, y, y_dict, n_splits=5, n_iter=1, resample='rus', smote_kind='regular', near_miss_ver=1, do_plot=1, score_to_plot=['auc', 'accuracy'], compute_auc=True, permute_train_labels=False</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder.TimeDecoder.decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do the temporal decoding of 3D data <code class="docutils literal notranslate"><span class="pre">X</span></code> given labels <code class="docutils literal notranslate"><span class="pre">y</span></code>
+For each time point, run</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">3D array [n_features, n_pnts, n_trials]</span></dt>
+<dd><p class="first last">Temporal feature array</p>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array [n_trials]</span></dt>
+<dd><p class="first last">Label array</p>
+</dd>
+<dt><strong>y_dict</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Label dictionnary</p>
+</dd>
+<dt><strong>n_splits</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of folds for the Stratified K-Folds cross-validation</p>
+</dd>
+<dt><strong>n_iter</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of times the whole decoding pipeline is repeated</p>
+</dd>
+<dt><strong>resample</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘rus’)</span></dt>
+<dd><p class="first last">Resampling method. Possible values : [<code class="docutils literal notranslate"><span class="pre">'ros'</span></code>, <code class="docutils literal notranslate"><span class="pre">'rus'</span></code>, <code class="docutils literal notranslate"><span class="pre">'nearmiss'</span></code>, <code class="docutils literal notranslate"><span class="pre">'smote'</span></code>’‘, <code class="docutils literal notranslate"><span class="pre">'adasyn'</span></code>’‘,
+<code class="docutils literal notranslate"><span class="pre">'smoteenn'</span></code>’‘, <code class="docutils literal notranslate"><span class="pre">'smotomek'</span></code>’‘] - See <a class="reference internal" href="#timedecoder.get_sampler" title="timedecoder.get_sampler"><code class="xref py py-func docutils literal notranslate"><span class="pre">timedecoder.get_sampler()</span></code></a></p>
+</dd>
+<dt><strong>smote_kind</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘regular’)</span></dt>
+<dd><p class="first last">The type of SMOTE algorithm to use one of the following options: <code class="docutils literal notranslate"><span class="pre">'regular'</span></code>, <code class="docutils literal notranslate"><span class="pre">'borderline1'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'borderline2'</span></code>,  <code class="docutils literal notranslate"><span class="pre">'svm'</span></code>. Only used if <code class="docutils literal notranslate"><span class="pre">method=='SMOTE'</span></code>.</p>
+</dd>
+<dt><strong>near_miss_ver</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Version of the NearMiss to use. Possible values are 1, 2 or 3.</p>
+</dd>
+<dt><strong>do_plot</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: True)</span></dt>
+<dd><p class="first last">Plot the decoding results</p>
+</dd>
+<dt><strong>score_to_plot</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | list</span></dt>
+<dd><dl class="first last docutils">
+<dt>The different scores to plot. Possible values :</dt>
+<dd><ul class="first last simple">
+<li>‘accuracy’</li>
+<li>‘precision’</li>
+<li>‘recall’</li>
+<li>‘f1’</li>
+<li>‘class_accuracy’</li>
+<li>‘auc’</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt><strong>permute_train_labels</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, permute the training labels. Used for computing a chance level.</p>
+</dd>
+<dt><strong>compute_auc</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: True)</span></dt>
+<dd><p class="first last">If True, compute the Area Under the Curve score.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>scores</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Dictionnary containing the different scores : ‘accuracy’, ‘precision’, ‘recall’, ‘f1’, ‘class_accuracy’
+and ‘auc’</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="timedecoder.TimeDecoder.decode_mpver">
+<code class="descname">decode_mpver</code><span class="sig-paren">(</span><em>X, y, y_dict, n_splits=5, n_iter=3, resample='rus', smote_kind='regular', near_miss_ver=1, do_plot=1, score_to_plot=['auc', 'accuracy'], compute_auc=True, permute_train_labels=False, n_processes=6</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder.TimeDecoder.decode_mpver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do the temporal decoding of 3D data <code class="docutils literal notranslate"><span class="pre">X</span></code> given labels <code class="docutils literal notranslate"><span class="pre">y</span></code> - Multiprocesses version</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">3D array [n_features, n_pnts, n_trials]</span></dt>
+<dd><p class="first last">Temporal feature array</p>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array [n_trials]</span></dt>
+<dd><p class="first last">Label array</p>
+</dd>
+<dt><strong>y_dict</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Label/Class dictionnary</p>
+</dd>
+<dt><strong>n_splits</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of folds for the Stratified K-Folds cross-validation</p>
+</dd>
+<dt><strong>n_iter</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of times the whole decoding pipeline is repeated</p>
+</dd>
+<dt><strong>resample</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘rus’)</span></dt>
+<dd><p class="first last">Resampling method. Possible values : [<code class="docutils literal notranslate"><span class="pre">'ros'</span></code>, <code class="docutils literal notranslate"><span class="pre">'rus'</span></code>, <code class="docutils literal notranslate"><span class="pre">'nearmiss'</span></code>, <code class="docutils literal notranslate"><span class="pre">'smote'</span></code>’‘, <code class="docutils literal notranslate"><span class="pre">'adasyn'</span></code>’‘,
+<code class="docutils literal notranslate"><span class="pre">'smoteenn'</span></code>’‘, <code class="docutils literal notranslate"><span class="pre">'smotomek'</span></code>’‘] - See <a class="reference internal" href="#timedecoder.get_sampler" title="timedecoder.get_sampler"><code class="xref py py-func docutils literal notranslate"><span class="pre">timedecoder.get_sampler()</span></code></a></p>
+</dd>
+<dt><strong>smote_kind</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘regular’)</span></dt>
+<dd><p class="first last">The type of SMOTE algorithm to use one of the following options: <code class="docutils literal notranslate"><span class="pre">'regular'</span></code>, <code class="docutils literal notranslate"><span class="pre">'borderline1'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'borderline2'</span></code>,  <code class="docutils literal notranslate"><span class="pre">'svm'</span></code>. Only used if <code class="docutils literal notranslate"><span class="pre">method=='SMOTE'</span></code>.</p>
+</dd>
+<dt><strong>near_miss_ver</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Version of the NearMiss to use. Possible values are 1, 2 or 3.</p>
+</dd>
+<dt><strong>do_plot</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: True)</span></dt>
+<dd><p class="first last">Plot the decoding results</p>
+</dd>
+<dt><strong>score_to_plot</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | list</span></dt>
+<dd><dl class="first last docutils">
+<dt>The different scores to plot. Possible values :</dt>
+<dd><ul class="first last simple">
+<li>‘accuracy’</li>
+<li>‘precision’</li>
+<li>‘recall’</li>
+<li>‘f1’</li>
+<li>‘class_accuracy’</li>
+<li>‘auc’</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt><strong>compute_auc</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: True)</span></dt>
+<dd><p class="first last">If True, compute the Area Under the Curve score.</p>
+</dd>
+<dt><strong>permute_train_labels</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, permute the training labels. Used for computing a chance level.</p>
+</dd>
+<dt><strong>n_processes</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int (default: 6)</span></dt>
+<dd><p class="first last">Number of processes to use in parralel</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>scores</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Dictionnary containing the different scores : ‘accuracy’, ‘precision’, ‘recall’, ‘f1’, ‘class_accuracy’
+and ‘auc’</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="timedecoder.TimeDecoder.plot_scores">
+<code class="descname">plot_scores</code><span class="sig-paren">(</span><em>scores</em>, <em>y_dict</em>, <em>n_iter</em>, <em>n_splits</em>, <em>n_pnts</em>, <em>resample</em>, <em>score_to_plot=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder.TimeDecoder.plot_scores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the decoding performances measures listed in <code class="docutils literal notranslate"><span class="pre">scores</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>scores</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd></dd>
+<dt><strong>y_dict</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Label / Class dictionnary</p>
+</dd>
+<dt><strong>n_splits</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of folds for the Stratified K-Folds cross-validation</p>
+</dd>
+<dt><strong>n_iter</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of times the whole decoding pipeline is repeated</p>
+</dd>
+<dt><strong>n_pnts</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of time points</p>
+</dd>
+<dt><strong>resample</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Name of the resampling method used for the decoding</p>
+</dd>
+<dt><strong>score_to_plot</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">Scores to plot</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="timedecoder.TimeDecoder.single_feature_decoding">
+<code class="descname">single_feature_decoding</code><span class="sig-paren">(</span><em>X, y, y_dict, n_splits=5, n_iter=3, resample='Rus', smote_kind='regular', near_miss_ver=1, do_plot=1, score_to_plot=['auc', 'accuracy'], compute_auc=True, permute_train_labels=False, n_processes=6, features_names=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder.TimeDecoder.single_feature_decoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the classifier on each feature separately. Plot the classification results as an image.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">3D array [n_features, n_pnts, n_trials]</span></dt>
+<dd><p class="first last">Temporal feature array</p>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array [n_trials]</span></dt>
+<dd><p class="first last">Label array</p>
+</dd>
+<dt><strong>y_dict</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Label dictionnary</p>
+</dd>
+<dt><strong>n_splits</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of folds for the Stratified K-Folds cross-validation</p>
+</dd>
+<dt><strong>n_iter</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of times the whole decoding pipeline is repeated</p>
+</dd>
+<dt><strong>resample</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘rus’)</span></dt>
+<dd><p class="first last">Resampling method. Possible values : [<code class="docutils literal notranslate"><span class="pre">'ros'</span></code>, <code class="docutils literal notranslate"><span class="pre">'rus'</span></code>, <code class="docutils literal notranslate"><span class="pre">'nearmiss'</span></code>, <code class="docutils literal notranslate"><span class="pre">'smote'</span></code>’‘, <code class="docutils literal notranslate"><span class="pre">'adasyn'</span></code>’‘,
+<code class="docutils literal notranslate"><span class="pre">'smoteenn'</span></code>’‘, <code class="docutils literal notranslate"><span class="pre">'smotomek'</span></code>’‘] - See <a class="reference internal" href="#timedecoder.get_sampler" title="timedecoder.get_sampler"><code class="xref py py-func docutils literal notranslate"><span class="pre">timedecoder.get_sampler()</span></code></a></p>
+</dd>
+<dt><strong>smote_kind</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘regular’)</span></dt>
+<dd><p class="first last">The type of SMOTE algorithm to use one of the following options: <code class="docutils literal notranslate"><span class="pre">'regular'</span></code>, <code class="docutils literal notranslate"><span class="pre">'borderline1'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'borderline2'</span></code>,  <code class="docutils literal notranslate"><span class="pre">'svm'</span></code>. Only used if <code class="docutils literal notranslate"><span class="pre">method=='SMOTE'</span></code>.</p>
+</dd>
+<dt><strong>near_miss_ver</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Version of the NearMiss to use. Possible values are 1, 2 or 3.</p>
+</dd>
+<dt><strong>do_plot</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: True)</span></dt>
+<dd><p class="first last">Plot the decoding results</p>
+</dd>
+<dt><strong>score_to_plot</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | list</span></dt>
+<dd><dl class="first last docutils">
+<dt>The different scores to plot. Possible values :</dt>
+<dd><ul class="first last simple">
+<li>‘accuracy’</li>
+<li>‘precision’</li>
+<li>‘recall’</li>
+<li>‘f1’</li>
+<li>‘class_accuracy’</li>
+<li>‘auc’</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt><strong>compute_auc</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: True)</span></dt>
+<dd><p class="first last">If True, compute the Area Under the Curve score.</p>
+</dd>
+<dt><strong>permute_train_labels</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, permute the training labels. Used for computing a chance level.</p>
+</dd>
+<dt><strong>n_processes</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int (default: 6)</span></dt>
+<dd><p class="first last">Number of processes to use in parralel</p>
+</dd>
+<dt><strong>features_names</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | None</span></dt>
+<dd><p class="first last">Name of each feature, used for the results figure.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>scores</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Dictionnary containing the different scores : ‘accuracy’, ‘precision’, ‘recall’, ‘f1’, ‘class_accuracy’
+and ‘auc’</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="timedecoder.TimeDecoder.temporal_generalization">
+<code class="descname">temporal_generalization</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>y_dict</em>, <em>n_splits=5</em>, <em>n_iter=3</em>, <em>resample='None'</em>, <em>smote_kind='regular'</em>, <em>near_miss_ver=1</em>, <em>permute_train_labels=False</em>, <em>n_processes=6</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder.TimeDecoder.temporal_generalization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporal Generalisation.
+For each time points, t_i, t_j, train the classifier at t_i, test at time t_j</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">3D array [n_features, n_pnts, n_trials]</span></dt>
+<dd><p class="first last">Temporal feature array</p>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array [n_trials]</span></dt>
+<dd><p class="first last">Label array</p>
+</dd>
+<dt><strong>y_dict</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Label/Class dictionnary</p>
+</dd>
+<dt><strong>n_splits</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of folds for the Stratified K-Folds cross-validation</p>
+</dd>
+<dt><strong>n_iter</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of times the whole decoding pipeline is repeated</p>
+</dd>
+<dt><strong>resample</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘rus’)</span></dt>
+<dd><p class="first last">Resampling method. Possible values : [<code class="docutils literal notranslate"><span class="pre">'ros'</span></code>, <code class="docutils literal notranslate"><span class="pre">'rus'</span></code>, <code class="docutils literal notranslate"><span class="pre">'nearmiss'</span></code>, <code class="docutils literal notranslate"><span class="pre">'smote'</span></code>’‘, <code class="docutils literal notranslate"><span class="pre">'adasyn'</span></code>’‘,
+<code class="docutils literal notranslate"><span class="pre">'smoteenn'</span></code>’‘, <code class="docutils literal notranslate"><span class="pre">'smotomek'</span></code>’‘] - See <a class="reference internal" href="#timedecoder.get_sampler" title="timedecoder.get_sampler"><code class="xref py py-func docutils literal notranslate"><span class="pre">timedecoder.get_sampler()</span></code></a></p>
+</dd>
+<dt><strong>smote_kind</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘regular’)</span></dt>
+<dd><p class="first last">The type of SMOTE algorithm to use one of the following options: <code class="docutils literal notranslate"><span class="pre">'regular'</span></code>, <code class="docutils literal notranslate"><span class="pre">'borderline1'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'borderline2'</span></code>,  <code class="docutils literal notranslate"><span class="pre">'svm'</span></code>. Only used if <code class="docutils literal notranslate"><span class="pre">method=='SMOTE'</span></code>.</p>
+</dd>
+<dt><strong>near_miss_ver</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Version of the NearMiss to use. Possible values are 1, 2 or 3.</p>
+</dd>
+<dt><strong>permute_train_labels</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, permute the training labels. Used for computing a chance level.</p>
+</dd>
+<dt><strong>n_processes</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int (default: 6)</span></dt>
+<dd><p class="first last">Number of processes to use in parralel</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>accuracy</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Accuracy score. Size [n_iter, n_pnts, n_pnts]</p>
+</dd>
+<dt><strong>auc</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Area Under the Curve score. Size [n_iter, n_pnts, n_pnts]</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="timedecoder.apply_pca">
+<code class="descclassname">timedecoder.</code><code class="descname">apply_pca</code><span class="sig-paren">(</span><em>X</em>, <em>n_components=0.95</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder.apply_pca" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not used ? - Should not be here</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="timedecoder.get_sampler">
+<code class="descclassname">timedecoder.</code><code class="descname">get_sampler</code><span class="sig-paren">(</span><em>method</em>, <em>smote_kind='regular'</em>, <em>near_miss_ver=1</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder.get_sampler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a resampler instance from the imbalanced-learn API
+Resampling is used when the number of trials is not the same across the 2 classes.
+For more details see <a class="reference external" href="https://imbalanced-learn.readthedocs.io/en/stable/user_guide.html">https://imbalanced-learn.readthedocs.io/en/stable/user_guide.html</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>method</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><dl class="first last docutils">
+<dt>Resampling method. Possible values :</dt>
+<dd><ul class="first last simple">
+<li>‘ros’, ‘randomoversampler’ : <code class="xref py py-class docutils literal notranslate"><span class="pre">imblearn.over_sampling.RandomOverSampler</span></code> - Object to over-sample the
+minority class(es) by picking samples at random with replacement.</li>
+<li>‘rus’, ‘randomundersampler’ : <code class="xref py py-class docutils literal notranslate"><span class="pre">imblearn.under_sampling.RandomUnderSampler</span></code> - Under-sample the
+majority class(es) by randomly picking samples with or without replacement.</li>
+<li>‘smote’ : <code class="xref py py-class docutils literal notranslate"><span class="pre">imblearn.over_sampling.RandomOverSampler</span></code> - Class to perform over-sampling using SMOTE,
+Synthetic Minority Over-sampling Technique.</li>
+<li>‘adasyn’ : <code class="xref py py-class docutils literal notranslate"><span class="pre">imblearn.over_sampling.ADASYN</span></code> - Perform over-sampling using Adaptive Synthetic (ADASYN)
+sampling approach for imbalanced datasets.</li>
+<li>‘nearmiss’ : <code class="xref py py-class docutils literal notranslate"><span class="pre">imblearn.over_sampling.RandomOverSampler</span></code> - Class to perform under-sampling based
+on NearMiss methods.</li>
+<li>‘smoteenn’ : <code class="xref py py-class docutils literal notranslate"><span class="pre">imblearn.combine.SMOTEENN</span></code> - Combine over- and under-sampling using
+SMOTE and Edited Nearest Neighbours.</li>
+<li>‘smotetomek’ : <code class="xref py py-class docutils literal notranslate"><span class="pre">imblearn.combine.SMOTETomek</span></code> - Combine over- and under-sampling
+using SMOTE and Tomek links.</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt><strong>smote_kind</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘regular’)</span></dt>
+<dd><dl class="first last docutils">
+<dt>The type of SMOTE algorithm to use one of the following options: <code class="docutils literal notranslate"><span class="pre">'regular'</span></code>, <code class="docutils literal notranslate"><span class="pre">'borderline1'</span></code>,</dt>
+<dd><p class="first last"><code class="docutils literal notranslate"><span class="pre">'borderline2'</span></code>,  <code class="docutils literal notranslate"><span class="pre">'svm'</span></code>. Only used if <code class="docutils literal notranslate"><span class="pre">method=='SMOTE'</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>near_miss_ver</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Version of the NearMiss to use. Possible values are 1, 2 or 3.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>sampler</strong> <span class="classifier-delimiter">:</span> <span class="classifier">imblearn sampler</span></dt>
+<dd><p class="first last">The sampler from the imbalanced-learn API</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="timedecoder.print_classes_composition">
+<code class="descclassname">timedecoder.</code><code class="descname">print_classes_composition</code><span class="sig-paren">(</span><em>y</em>, <em>y_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder.print_classes_composition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the number of trials for the different classes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Trial labels</p>
+</dd>
+<dt><strong>y_dict</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Dictionnary containing the name of each class</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="timedecoder.timethis">
+<code class="descclassname">timedecoder.</code><code class="descname">timethis</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#timedecoder.timethis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, Martin Deudon.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

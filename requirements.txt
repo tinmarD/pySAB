@@ -1,0 +1,11 @@
+sphinx_bootstrap_theme
+numpydoc
+sphinx_gallery
+pywavelets
+tqdm
+sklearn
+seaborn
+datetime
+scipy
+mne
+imbalanced-learn

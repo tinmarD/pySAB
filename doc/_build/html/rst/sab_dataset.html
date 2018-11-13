@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>sab_dataset module &#8212; Sab Analysis 0 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/my-styles.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="sab_clustering module" href="sab_clustering.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Sab Analysis</a>
+        <span class="navbar-text navbar-version pull-left"><b>0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="overview.rst.html">Overview</a></li>
+                <li><a href="modules.html">API</a></li>
+                <li><a href="../auto_examples/index.html">Examples</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pySAB</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">General Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#decoding-example">Decoding example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#erp-example">ERP example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#phase-utils-example">Phase Utils example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#time-features-examples">Time Features examples</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/rst/sab_dataset.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">sab_dataset module</a><ul>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="sab_clustering.html" title="Previous Chapter: sab_clustering module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; sab_clustering module</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../_sources/rst/sab_dataset.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-sab_dataset">
+<span id="sab-dataset-module"></span><h1>sab_dataset module<a class="headerlink" href="#module-sab_dataset" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sab_dataset.ChannelInfo">
+<em class="property">class </em><code class="descclassname">sab_dataset.</code><code class="descname">ChannelInfo</code><span class="sig-paren">(</span><em>channel_names</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.ChannelInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Contains informations about channels</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>n_chan</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of channels</p>
+</dd>
+<dt><strong>chan_names</strong> <span class="classifier-delimiter">:</span> <span class="classifier">numpy array (str)</span></dt>
+<dd><p class="first last">Array containing the channels’ name</p>
+</dd>
+<dt><strong>chan_names_no_eeg</strong> <span class="classifier-delimiter">:</span> <span class="classifier">numpy array (str)</span></dt>
+<dd><p class="first last">Channel names without the ‘EEG’ prefix</p>
+</dd>
+<dt><strong>chan_elec_names</strong> <span class="classifier-delimiter">:</span> <span class="classifier">numpy array (str)</span></dt>
+<dd><p class="first last">Name of the electrode for each channel</p>
+</dd>
+<dt><strong>elec_names</strong> <span class="classifier-delimiter">:</span> <span class="classifier">numpy array (str)</span></dt>
+<dd><p class="first last">Name of all different electrodes</p>
+</dd>
+<dt><strong>elec_eeg_names</strong> <span class="classifier-delimiter">:</span> <span class="classifier">numpy array (str)</span></dt>
+<dd><p class="first last">Name of all different EEG electrodes</p>
+</dd>
+<dt><strong>n_elec</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of electrodes</p>
+</dd>
+<dt><strong># n_elec_eeg</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of EEG electrodes</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sab_dataset.ChannelInfo.get_channel_name" title="sab_dataset.ChannelInfo.get_channel_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_channel_name</span></code></a>(chan_sel_pos)</td>
+<td>Get the channel name from the channel’s position</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sab_dataset.ChannelInfo.get_channel_pos" title="sab_dataset.ChannelInfo.get_channel_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_channel_pos</span></code></a>(chan_sel_name[,&nbsp;true_match])</td>
+<td>Return the channel position from the channel’s name</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sab_dataset.ChannelInfo.get_eeg_channels" title="sab_dataset.ChannelInfo.get_eeg_channels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_eeg_channels</span></code></a>()</td>
+<td>Used to find the EEG channels</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sab_dataset.ChannelInfo.get_electrode_channels_pos" title="sab_dataset.ChannelInfo.get_electrode_channels_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_electrode_channels_pos</span></code></a>(elec_desc)</td>
+<td>Get the channels position of the selected electrode</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sab_dataset.ChannelInfo.get_electrode_names" title="sab_dataset.ChannelInfo.get_electrode_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_electrode_names</span></code></a>()</td>
+<td>Used to get electrode names from the channel names</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sab_dataset.ChannelInfo.get_channel_name">
+<code class="descname">get_channel_name</code><span class="sig-paren">(</span><em>chan_sel_pos</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.ChannelInfo.get_channel_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the channel name from the channel’s position</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>chan_sel_pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | array</span></dt>
+<dd><p class="first last">Channel’s position</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>chan_names</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | list</span></dt>
+<dd><p class="first last">Channel’s names</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.ChannelInfo.get_channel_pos">
+<code class="descname">get_channel_pos</code><span class="sig-paren">(</span><em>chan_sel_name</em>, <em>true_match=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.ChannelInfo.get_channel_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the channel position from the channel’s name</p>
+<dl class="docutils">
+<dt>chan_sel_name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Channel’s name</dd>
+<dt>true_match <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: True)</span></dt>
+<dd>If True, search an exact match between <code class="docutils literal notranslate"><span class="pre">chan_sel_name</span></code> parameter and <code class="docutils literal notranslate"><span class="pre">chan_names</span></code> attribute. If False
+returns, every channel position containing <code class="docutils literal notranslate"><span class="pre">chan_sel_name</span></code></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.ChannelInfo.get_eeg_channels">
+<code class="descname">get_eeg_channels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.ChannelInfo.get_eeg_channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to find the EEG channels</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">EEG channels’ name should start with the prefix ‘EEG’</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If no EEG channel can be found, all channels are considered to be EEG channels</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>eeg_channels_ind</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array [boolean]</span></dt>
+<dd><p class="first last">Boolean array containing 1 if channel is an EEG channel, 0 otherwise</p>
+</dd>
+<dt><strong>n_eeg_channels</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of eeg channels</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.ChannelInfo.get_electrode_channels_pos">
+<code class="descname">get_electrode_channels_pos</code><span class="sig-paren">(</span><em>elec_desc</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.ChannelInfo.get_electrode_channels_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the channels position of the selected electrode</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>elec_desc</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | str | array</span></dt>
+<dd><p class="first last">Either the number of the electrode, or the name of the electrode to select</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>elec_chan_pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Position of the channels of the selected electrode</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.ChannelInfo.get_electrode_names">
+<code class="descname">get_electrode_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.ChannelInfo.get_electrode_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to get electrode names from the channel names</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>Electrode names</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sab_dataset.SabDataset">
+<em class="property">class </em><code class="descclassname">sab_dataset.</code><code class="descname">SabDataset</code><span class="sig-paren">(</span><em>matlab_dataset_dirpath</em>, <em>subject_id</em>, <em>dataset_type='rec'</em>, <em>colors_dict=[]</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.SabDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class representing a SAB dataset - can be from the encoding phase or recognition phase</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>matlab_dataset_dirpath</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Path of the Matlab dataset</p>
+</dd>
+<dt><strong>subject_id</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Subject identifier</p>
+</dd>
+<dt><strong>dataset_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">either ‘rec’ or ‘enc’ for recognition and encoding datasets respectively</p>
+</dd>
+<dt><strong>srate</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Sampling Rate (Hz)</p>
+</dd>
+<dt><strong>data</strong> <span class="classifier-delimiter">:</span> <span class="classifier">numpy array [3D]</span></dt>
+<dd><p class="first last">Data matrix 3D - size [n_chan, n_pnts, n_trials]</p>
+</dd>
+<dt><strong>times</strong> <span class="classifier-delimiter">:</span> <span class="classifier">numpy array</span></dt>
+<dd><p class="first last">time vector</p>
+</dd>
+<dt><strong>n_chan, n_pnts, n_trials</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">number of channels / time points / trials</p>
+</dd>
+<dt><strong>tmin, tmax</strong> <span class="classifier-delimiter">:</span> <span class="classifier">num</span></dt>
+<dd><p class="first last">minimum / maximum time</p>
+</dd>
+<dt><strong>channel_info</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="#sab_dataset.ChannelInfo" title="sab_dataset.ChannelInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChannelInfo</span></code></a> instance</span></dt>
+<dd><p class="first last">Contains information about the channels</p>
+</dd>
+<dt><strong>For ‘rec’ datasets:</strong></dt>
+<dd></dd>
+<dt><strong>hits, correct_rejects, false_alarms, omissions</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | array</span></dt>
+<dd><p class="first last">binary vectors representing each conditions [size: (n_samples)]</p>
+</dd>
+<dt><strong>reaction_times</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | array</span></dt>
+<dd><p class="first last">reaction times vector [size: (n_samples)]</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sab_dataset.SabDataset.create_features" title="sab_dataset.SabDataset.create_features"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_features</span></code></a>([chan_sel,&nbsp;electrode_sel,&nbsp;…])</td>
+<td>Create a TimeFeatures instance from the current dataset</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sab_dataset.SabDataset.downsample" title="sab_dataset.SabDataset.downsample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">downsample</span></code></a>(decimate_order)</td>
+<td>Downsample the data along the time axis.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sab_dataset.SabDataset.plot_electrode_erps" title="sab_dataset.SabDataset.plot_electrode_erps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_electrode_erps</span></code></a>(elec_desc[,&nbsp;plot_ci,&nbsp;…])</td>
+<td>Plot on the same figure the ERPs for each channel of the selected electrode</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sab_dataset.SabDataset.plot_erp" title="sab_dataset.SabDataset.plot_erp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_erp</span></code></a>(channel_desc[,&nbsp;plot_ci,&nbsp;plot_hits,&nbsp;…])</td>
+<td>Plot the evoked response averaged over trials</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sab_dataset.SabDataset.plot_erp_subplot" title="sab_dataset.SabDataset.plot_erp_subplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_erp_subplot</span></code></a>(data,&nbsp;ax,&nbsp;color_str,&nbsp;plot_ci)</td>
+<td>Internal rountine used by plot_erp method</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sab_dataset.SabDataset.plot_itpc" title="sab_dataset.SabDataset.plot_itpc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_itpc</span></code></a>(channel_desc[,&nbsp;trial_pos,&nbsp;…])</td>
+<td>Plot the ITPC, Inter-Trial Phase Coherence</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sab_dataset.SabDataset.save" title="sab_dataset.SabDataset.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>([dir_path,&nbsp;filename])</td>
+<td>Save the SabDataset instance to a pickle file using the pickle module.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sab_dataset.SabDataset.save_sig_to_file" title="sab_dataset.SabDataset.save_sig_to_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_sig_to_file</span></code></a>(chanpos[,&nbsp;trialpos,&nbsp;output_dir])</td>
+<td>Save the signal to a file</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="69%" />
+<col width="31%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>plot_mean_spectrum</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sab_dataset.SabDataset.create_features">
+<code class="descname">create_features</code><span class="sig-paren">(</span><em>chan_sel=[]</em>, <em>electrode_sel=[]</em>, <em>trial_sel=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.SabDataset.create_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a TimeFeatures instance from the current dataset</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>chan_sel</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | str | array | None (default: None)</span></dt>
+<dd><p class="first last">Channel selection to compute the feature only on these channels. If none, select all channels</p>
+</dd>
+<dt><strong>electrode_sel</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | str | array | None (default: None)</span></dt>
+<dd><p class="first last">Electrode selection to compute the feature only on these electrodes. If none, the selection is done based
+on <code class="docutils literal notranslate"><span class="pre">chan_sel</span></code> parameter</p>
+</dd>
+<dt><strong>trial_sel</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array | None (default: None)</span></dt>
+<dd><p class="first last">Trial selection to compute the features only with these trials. If none, select all trials</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>TimeFeatures</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Instance of TimeFeatures</span></dt>
+<dd><p class="first last">TimeFeatures instance generated from the amplitude of the current dataset, given the selected channels</p>
+</dd>
+<dt><strong>.. note:: If both chan_sel and electrode_sel are provided, the selection is only done given the electrode</strong></dt>
+<dd></dd>
+<dt><strong>selection</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.SabDataset.downsample">
+<code class="descname">downsample</code><span class="sig-paren">(</span><em>decimate_order</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.SabDataset.downsample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downsample the data along the time axis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>decimate_order</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Order of the down-sampling. Sampling frequency will be divided by this number</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.SabDataset.plot_electrode_erps">
+<code class="descname">plot_electrode_erps</code><span class="sig-paren">(</span><em>elec_desc</em>, <em>plot_ci=0</em>, <em>plot_hits=1</em>, <em>plot_cr=0</em>, <em>plot_omissions=0</em>, <em>plot_fa=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.SabDataset.plot_electrode_erps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot on the same figure the ERPs for each channel of the selected electrode</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>elec_desc</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Electrode’s name</p>
+</dd>
+<dt><strong>plot_ci</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, plot the confidence interval around the mean</p>
+</dd>
+<dt><strong>plot_hits</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: True)</span></dt>
+<dd><p class="first last">If True, plot the ERP for the ‘Hit’ condition</p>
+</dd>
+<dt><strong>plot_cr</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, plot the ERP for the ‘Correct Reject’ condition</p>
+</dd>
+<dt><strong>plot_omissions</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, plot the ERP for the ‘Omission’ condition</p>
+</dd>
+<dt><strong>plot_fa</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, plot the ERP for the ‘False Alarme’ condition</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.SabDataset.plot_erp">
+<code class="descname">plot_erp</code><span class="sig-paren">(</span><em>channel_desc</em>, <em>plot_ci=1</em>, <em>plot_hits=1</em>, <em>plot_cr=1</em>, <em>plot_omissions=0</em>, <em>plot_fa=0</em>, <em>ax=[]</em>, <em>colors_dict=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.SabDataset.plot_erp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the evoked response averaged over trials</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>channel_desc</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | int | array</span></dt>
+<dd><p class="first last">Channel’s name or position</p>
+</dd>
+<dt><strong>plot_ci</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: True)</span></dt>
+<dd><p class="first last">If True, plot the confidence interval around the mean</p>
+</dd>
+<dt><strong>plot_hits</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: True)</span></dt>
+<dd><p class="first last">If True, plot the ERP for the ‘Hit’ condition</p>
+</dd>
+<dt><strong>plot_cr</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: True)</span></dt>
+<dd><p class="first last">If True, plot the ERP for the ‘Correct Reject’ condition</p>
+</dd>
+<dt><strong>plot_omissions</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, plot the ERP for the ‘Omission’ condition</p>
+</dd>
+<dt><strong>plot_fa</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool (default: False)</span></dt>
+<dd><p class="first last">If True, plot the ERP for the ‘False Alarme’ condition</p>
+</dd>
+<dt><strong>ax</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | none (default: none)</span></dt>
+<dd><p class="first last">List of axis where to plot the ERP</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>ax_list</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">List of axis where to plot the ERP</p>
+</dd>
+<dt><strong>leg_h</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Array of legends handles</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.SabDataset.plot_erp_subplot">
+<code class="descname">plot_erp_subplot</code><span class="sig-paren">(</span><em>data</em>, <em>ax</em>, <em>color_str</em>, <em>plot_ci</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.SabDataset.plot_erp_subplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal rountine used by plot_erp method</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.SabDataset.plot_itpc">
+<code class="descname">plot_itpc</code><span class="sig-paren">(</span><em>channel_desc</em>, <em>trial_pos=[]</em>, <em>filt_cf=array([ 3.</em>, <em>3.54095194</em>, <em>4.17944689</em>, <em>4.93307353</em>, <em>5.82259211</em>, <em>6.87250628</em>, <em>8.11173816</em>, <em>9.57442501</em>, <em>11.30085962</em>, <em>13.33860028</em>, <em>15.74378087</em>, <em>18.58265717</em>, <em>21.93343201</em>, <em>25.88840958</em>, <em>30.55653809</em>, <em>36.06641099</em>, <em>42.56980938</em>, <em>50.24588311</em>, <em>59.30608584</em>, <em>70.        ])</em>, <em>filt_bw=array([ 1.5</em>, <em>1.71908979</em>, <em>1.9701798</em>, <em>2.25794399</em>, <em>2.58773897</em>, <em>2.96570377</em>, <em>3.39887404</em>, <em>3.89531311</em>, <em>4.464262</em>, <em>5.11631148</em>, <em>5.86359922</em>, <em>6.7200357</em>, <em>7.70156317</em>, <em>8.82645241</em>, <em>10.11564282</em>, <em>11.59313219</em>, <em>13.28642346</em>, <em>15.22703661</em>, <em>17.45109544</em>, <em>20.        ])</em>, <em>f_tolerance=[]</em>, <em>noise_tolerance=[]</em>, <em>n_monte_carlo=20</em>, <em>ftype='elliptic'</em>, <em>forder=4</em>, <em>do_plot=1</em>, <em>contour_plot=1</em>, <em>n_contours=20</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.SabDataset.plot_itpc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the ITPC, Inter-Trial Phase Coherence</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>channel_desc</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | str | array</span></dt>
+<dd><p class="first last">Channel’s position or name</p>
+</dd>
+<dt><strong>trial_pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array | None (default: None)</span></dt>
+<dd><p class="first last">Trial to select before computing the ITPC. If none, select all trials</p>
+</dd>
+<dt><strong>filt_cf</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Filter’s center frequency for computing the ITPC (in Hz)</p>
+</dd>
+<dt><strong>filt_bw</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array | int</span></dt>
+<dd><p class="first last">Filter’s bandwidth. Can be fixed or evolve with the center frequency. (In Hz)</p>
+</dd>
+<dt><strong>f_tolerance</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | array | None (default: none)</span></dt>
+<dd><p class="first last">Tolerance of the cut-off frequencies. A random number in the interval [-f_tolerance/2, +f_tolerance/2] will
+be added to the cut-off frequencies. If none, f_tolerance is set to <code class="docutils literal notranslate"><span class="pre">filt_bw</span> <span class="pre">/</span> <span class="pre">100</span></code> for each filter.</p>
+</dd>
+<dt><strong>noise_tolerance</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | None (default: none)</span></dt>
+<dd><p class="first last">Random noise from a uniform distribution in [-noise_tolerance/2, +noise_tolerance/2] will be added to
+the signal x_raw. If none, noise_tolerance is set to <code class="docutils literal notranslate"><span class="pre">np.std(data_sel)</span> <span class="pre">/</span> <span class="pre">30</span></code>.</p>
+</dd>
+<dt><strong>n_monte_carlo</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of monte carlo repetition</p>
+</dd>
+<dt><strong>ftype</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first">Filter type:</p>
+<ul class="last simple">
+<li>‘butter’ : Butterworth filter</li>
+<li>‘elliptic’ (default) : Elliptic filter</li>
+<li>‘fir’ : Finite Impulse Response filter</li>
+</ul>
+</dd>
+<dt><strong>forder</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Filter order - default : 4</p>
+</dd>
+<dt><strong>do_plot</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | bool</span></dt>
+<dd><p class="first last">If 1, plot the ITPC (default: 0)</p>
+</dd>
+<dt><strong>contour_plot</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | bool</span></dt>
+<dd><p class="first last">If 1 , plot the contours (contourf function) else use the imshow function (default: 1)</p>
+</dd>
+<dt><strong>n_contours</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">contour_plot=1</span></code>, number of levels in contourf function</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="phase_utils.html#phase_utils.itpc" title="phase_utils.itpc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">phase_utils.itpc</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.SabDataset.plot_mean_spectrum">
+<code class="descname">plot_mean_spectrum</code><span class="sig-paren">(</span><em>channel_desc</em>, <em>fmin=2</em>, <em>fmax=90</em>, <em>plot_hits=1</em>, <em>plot_cr=1</em>, <em>plot_omissions=0</em>, <em>plot_fa=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.SabDataset.plot_mean_spectrum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.SabDataset.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>dir_path='.'</em>, <em>filename=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.SabDataset.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the SabDataset instance to a pickle file using the pickle module.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>dir_path</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Path of the directory where it will be saved</p>
+</dd>
+<dt><strong>filename</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Filename</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sab_dataset.SabDataset.save_sig_to_file">
+<code class="descname">save_sig_to_file</code><span class="sig-paren">(</span><em>chanpos</em>, <em>trialpos=[]</em>, <em>output_dir='.'</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.SabDataset.save_sig_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the signal to a file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>chanpos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | str</span></dt>
+<dd><p class="first last">Channel position</p>
+</dd>
+<dt><strong>trialpos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | None (default: None)</span></dt>
+<dd><p class="first last">Trial position. If none, will save all the trials in a 3D data matrix.</p>
+</dd>
+<dt><strong>output_dir</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str (default: ‘.’)</span></dt>
+<dd><p class="first last">Output directory path</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="sab_dataset.load_sab_dataset">
+<code class="descclassname">sab_dataset.</code><code class="descname">load_sab_dataset</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.load_sab_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a time SabDataset instance previously saved using the pickle module</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>filepath</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Path of the pickle file</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>sab_dataset</strong> <span class="classifier-delimiter">:</span> <span class="classifier">SabDataset instance</span></dt>
+<dd><p class="first last">The SabDataset instance</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, Martin Deudon.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

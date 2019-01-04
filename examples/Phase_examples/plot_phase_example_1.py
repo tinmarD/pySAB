@@ -7,6 +7,8 @@ This example shows how to use the Phase functions
 
 """
 
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from os.path import join, isdir
 import seaborn as sns

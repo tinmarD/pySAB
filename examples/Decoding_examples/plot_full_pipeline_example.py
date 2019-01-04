@@ -6,6 +6,8 @@ From SAB Dataset to Decoding
 This example shows how to use the different modules of SAB_main from the creation of the SAB Dataset to decoding EEG
 
 """
+import matplotlib
+matplotlib.use('TkAgg')
 import sab_dataset
 from timedecoder import *
 from sklearn import svm
@@ -16,7 +18,7 @@ sns.set_context('paper')
 
 
 sab_dataset_dirpath = os.path.join('pySAB', 'sample_data') if os.path.isdir('pySAB') else os.path.join('..', '..', 'pySAB', 'sample_data')
-sab_dataset_filename = 'sab_dataset_name.p'
+sab_dataset_filename = 'sab_dataset_rec_subject_id_040119_1153.p'
 
 load_dataset = 1
 ###########################################
@@ -51,7 +53,7 @@ print(sab_dataset)
 help(sab_dataset.downsample)
 
 # Downsample the dataset to 256Hz
-sab_dataset.downsample(8)
+sab_dataset.downsample(2)
 
 ###########################################
 # TimeFeature Creation from the sab_dataset
@@ -97,5 +99,5 @@ print(time_features.channel_names)
 
 ###########################################
 # If we want to select only some channel, you can specify it with the feature_channame argument :
-data, _, labels, _ = time_features.get_data(feature_channame=['C\'1-C\'2'], label_keys=[1, 2])
+data, _, labels, _ = time_features.get_data(feature_channame=['EEG TP\'2-TP\'3'], label_keys=[1, 2])
 scores = time_decoder.decode_mpver(data, labels, time_features.label_dict)

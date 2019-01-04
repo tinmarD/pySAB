@@ -8,6 +8,8 @@ at a certain time point.
 
 """
 
+import matplotlib
+matplotlib.use('TkAgg')
 from os.path import isdir, join
 import sab_dataset
 import seaborn as sns
@@ -17,18 +19,17 @@ sns.set_context('paper')
 ############################
 # Load the data : sab dataset
 sab_dataset_dirpath = join('pySAB', 'sample_data') if isdir('pySAB') else join('..', '..', 'pySAB', 'sample_data')
-sab_dataset_filename = 'sab_dataset_name.p'
+sab_dataset_filename = 'sab_dataset_rec_subject_id_040119_1153.p'
 rec_dataset = sab_dataset.load_sab_dataset(join(sab_dataset_dirpath, sab_dataset_filename))
 
 ###########################
 # Downsample the data
-rec_dataset.downsample(8)
+rec_dataset.downsample(2)
 
 ###################################################
 # Construct the features from the SabDataset object - Select only 'hits' and 'correct rejects' trials and keep only
 # 2 electrodes of interest :
-time_features = rec_dataset.create_features(electrode_sel=['TB\'', 'C\''],
-                                            trial_sel=(rec_dataset.hits | rec_dataset.correct_rejects))
+time_features = rec_dataset.create_features(trial_sel=(rec_dataset.hits | rec_dataset.correct_rejects))
 print(time_features)
 
 #####################################
@@ -42,14 +43,14 @@ print(time_features)
 
 ####################################
 # Plot the evolution of feature 19 :
-time_features.plot_feature_erp(feature_pos=19)
+time_features.plot_feature_erp(feature_pos=2)
 
 ####################################
 # Plot the evolution of feature DWT 16-32 Hz for channel TB'10-TB'11 :
-time_features.plot_feature_erp(feature_type='DWT 16-32', feature_channame='TB\'10-TB\'11')
+time_features.plot_feature_erp(feature_type='DWT 16-32', feature_channame='EEG TP\'3-TP\'4')
 
 ####################################
 # Plot the distribution of a feature at a certain time point. The 'time_points' parameter must be passed and contain
 # only 1 time point
 time_point_sel = time_features.time2sample(0.55)
-time_features.plot_feature_distribution(time_points=time_point_sel, feature_pos=19)
+time_features.plot_feature_distribution(time_points=time_point_sel, feature_pos=10)

@@ -6,8 +6,8 @@
 This example study the correlation between the Hits features and the reaction times.
 
 """
-import matplotlib
-matplotlib.use('TkAgg')
+# import matplotlib
+# matplotlib.use('TkAgg')
 from os.path import isdir, join
 import matplotlib.pyplot as plt
 import sab_dataset

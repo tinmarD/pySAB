@@ -7,8 +7,8 @@ This example shows how to compute and plot the ITPC : Inter-Trial Phase Coherenc
 
 """
 
-import matplotlib
-matplotlib.use('TkAgg')
+# import matplotlib
+# matplotlib.use('TkAgg')
 import numpy as np
 import matplotlib.pyplot as plt
 from os.path import isdir, join

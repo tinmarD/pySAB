@@ -6,8 +6,8 @@ From SAB Dataset to Decoding
 This example shows how to use the different modules of SAB_main from the creation of the SAB Dataset to decoding EEG
 
 """
-import matplotlib
-matplotlib.use('TkAgg')
+# import matplotlib
+# matplotlib.use('TkAgg')
 import sab_dataset
 from timedecoder import *
 from sklearn import svm

@@ -8,8 +8,8 @@ This example shows how to create a TimeFeature instance from a SabDataset instan
 
 """
 
-import matplotlib
-matplotlib.use('TkAgg')
+# import matplotlib
+# matplotlib.use('TkAgg')
 from os.path import isdir, join
 import sab_dataset
 import seaborn as sns

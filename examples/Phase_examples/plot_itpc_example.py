@@ -21,7 +21,7 @@ sns.set_context('paper')
 ############################
 # Load the data : sab dataset
 sab_dataset_dirpath = join('pySAB', 'sample_data') if isdir('pySAB') else join('..', '..', 'pySAB', 'sample_data')
-sab_dataset_filename = 'sab_dataset_small.p'
+sab_dataset_filename = 'sab_dataset_rec_subject_id_040119_1153.p'
 rec_dataset = load_sab_dataset(join(sab_dataset_dirpath, sab_dataset_filename))
 
 ############################

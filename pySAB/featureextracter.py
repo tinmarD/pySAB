@@ -565,8 +565,8 @@ def compute_band_mean(data, freqs, freq_bands, interp_method='linear', freqs_int
     freq_bands : array (size: n_freq_bands * 2)
         Frequency bands of interest. Mean value are calculated on these bands.
     interp_method : str (default: 'linear')
-        Specifies the kind of interpolation as a string (‘linear’, ‘nearest’, ‘zero’, ‘slinear’, ‘quadratic’, ‘cubic’)
-        See :func: `scipy.interpolate.interp1d`
+        Specifies the kind of interpolation as a string ('linear', 'nearest', 'zero', 'slinear', 'quadratic', 'cubic')
+        See :func: `scipy.interpolated.interp1d`
     freqs_interp : array | None (default: none)
         Frequencies (in Hz) used for interpolation. If none, 3 equally spaced frequency points are added between each
         original frequency value.

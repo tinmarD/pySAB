@@ -70,7 +70,10 @@ class TimeDecoder:
     """
     def __init__(self, classifier, scaling="normalization", do_pca=0, n_components=0.95):
         self.clf = classifier
-        self.clf_name = re.search('.+\(', classifier.__str__())[0][:-1]
+        try:
+            self.clf_name = re.search('.+\(', classifier.__str__())[0][:-1]
+        except:
+            self.clf_name = 'Unknown'
         self.scaler_name = scaling
         if scaling.lower() == 'standardization':
             self.scaler = StandardScaler()

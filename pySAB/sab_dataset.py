@@ -352,7 +352,7 @@ class SabDataset:
             filename = 'sab_dataset_{}_{}_{}.p'.format(self.dataset_type, self.subject_id,
                                                        datetime.strftime(datetime.now(), '%d%m%y_%H%M'))
         with open(os.path.join(dir_path, filename), 'wb') as f:
-            _pickle.dump(self, f)
+            pickle.dump(self, f)
 
     def save_sig_to_file(self, chanpos, trialpos=[], output_dir=r'.'):
         """ Save the signal to a file
@@ -703,5 +703,5 @@ def load_sab_dataset(filepath):
         The SabDataset instance
     """
     with open(filepath, 'rb') as f:
-        return _pickle.load(f)
+        return pickle.load(f)
 

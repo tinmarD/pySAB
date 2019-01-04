@@ -16,7 +16,7 @@ from imblearn.over_sampling import RandomOverSampler, SMOTE, ADASYN
 from imblearn.under_sampling import RandomUnderSampler, NearMiss
 from imblearn.combine import SMOTEENN, SMOTETomek
 from functools import wraps
-import _pickle
+import pickle
 import time
 import tqdm
 import re

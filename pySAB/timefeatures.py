@@ -10,7 +10,7 @@ import inspect
 import re
 import tqdm
 from datetime import datetime
-import _pickle
+import pickle
 from os import path, mkdir
 from sab_clustering import *
 from featureextracter import FeatureExtracter
@@ -133,7 +133,7 @@ class TimeFeatures:
         if filename_desc:
             filename = '{}_{}.p'.format(filename[:-2], filename_desc)
         with open(path.join(dir_path, filename), 'wb') as f:
-            _pickle.dump(self, f)
+            pickle.dump(self, f)
 
     def get_feature_pos(self, feature_pos=[], feature_type=[], feature_channame=[], join=0):
         """ Get the feature position from feature type or/and feature channel name
@@ -971,7 +971,7 @@ def load_time_features(filepath):
         The TimeFeatures instance
     """
     with open(filepath, 'rb') as f:
-        return _pickle.load(f)
+        return pickle.load(f)
 
 
 def scale_data(data, scaling, feature_range=(0, 1)):

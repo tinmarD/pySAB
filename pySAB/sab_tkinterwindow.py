@@ -3,7 +3,7 @@ matplotlib.use('TkAgg')
 import numpy as np
 import tkinter as tk
 import tkinter.ttk as ttk
-import _pickle
+import pickle
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
 from matplotlib.figure import Figure
 from sklearn.cluster import KMeans

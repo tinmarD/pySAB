@@ -7,7 +7,7 @@ import os
 import re
 from datetime import datetime
 from mne.time_frequency import psd_array_welch
-import _pickle
+import pickle
 import timefeatures
 import phase_utils
 sns.set()
@@ -185,7 +185,8 @@ class ChannelInfo:
 
 
 class SabDataset:
-    """Class representing a SAB dataset - can be from the encoding phase or recognition phase
+    """ Class representing a SAB dataset - can represent the encoding phase or recognition phase.
+    SabDataset instances are created from the Matlab EEGrec/EEGenc datasets (See documentation for more details)
 
     Attributes
     ----------

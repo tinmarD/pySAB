@@ -46,8 +46,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../../rst/overview.rst.html">Overview</a></li>
-                <li><a href="../../rst/modules.html">API</a></li>
+                <li><a href="../../rst/dataset_creation.html">Datasets</a></li>
+                <li><a href="../../rst/api.html">API</a></li>
+                <li><a href="../../rst/modules.html">Modules</a></li>
                 <li><a href="../index.html">Examples</a></li>
             
             
@@ -248,9 +249,9 @@ create_features(chan_sel=[], electrode_sel=[], trial_sel=[]) method of sab_datas
 <span class="n">Feature</span> <span class="n">types</span> <span class="p">:</span> <span class="n">Amp</span>
 </pre></div>
 </div>
-<p>TimeDecoder Class
+<p>TimeDecoder Class.
 In this step, the time_decoder instance is created from the TimeDecoder class. This class allow to run classification on
-the time_features data
+the time_features data.
 First we need to created a classifier to the time_decoder instance. It can be Support Vector Machine, LDA, … as long
 as it support 2-classes classification with fit and predict methods
 In this example, we use a SVM classifier, with C parameter set to 1</p>
@@ -260,7 +261,7 @@ In this example, we use a SVM classifier, with C parameter set to 1</p>
 <span class="n">time_decoder</span> <span class="o">=</span> <span class="n">TimeDecoder</span><span class="p">(</span><span class="n">svm_clf</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Decoding
+<p>Decoding.
 We can now start to classify the EEG data (stored in time_features), given 2 conditions (e.g. ‘hits’ and ‘Correct rejects’)
 by using the decode method.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">time_features</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">label_keys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
@@ -274,11 +275,11 @@ by using the decode method.</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Hits&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;Correct rejects&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;Omissions&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;False Alarms&#39;</span><span class="p">}</span>
 <span class="mi">183</span> <span class="n">Hits</span> <span class="o">-</span> <span class="mi">173</span> <span class="n">Correct</span> <span class="n">rejects</span>
-<span class="n">Function</span> <span class="p">:</span> <span class="n">decode_mpver</span> <span class="o">-</span> <span class="n">Time</span> <span class="n">elapsed</span> <span class="p">:</span> <span class="mf">31.33400011062622</span>
+<span class="n">Function</span> <span class="p">:</span> <span class="n">decode_mpver</span> <span class="o">-</span> <span class="n">Time</span> <span class="n">elapsed</span> <span class="p">:</span> <span class="mf">32.78383207321167</span>
 </pre></div>
 </div>
-<p>You can select data using the arguments of get_data method (see help(time_features.get_data))
-The possible selection arguments are feature_pos, feature_type, feature_channame, label_keys and time_points
+<p>You can select data using the arguments of get_data method (see help(time_features.get_data)).
+The possible selection arguments are feature_pos, feature_type, feature_channame, label_keys and time_points.
 The current time_features instance contains the following channels :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">time_features</span><span class="o">.</span><span class="n">channel_names</span><span class="p">)</span>
 </pre></div>
@@ -319,10 +320,10 @@ The current time_features instance contains the following channels :</p>
 <img alt="../../_images/sphx_glr_plot_full_pipeline_example_002.png" class="align-center" src="../../_images/sphx_glr_plot_full_pipeline_example_002.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">183</span> <span class="n">Hits</span> <span class="o">-</span> <span class="mi">173</span> <span class="n">Correct</span> <span class="n">rejects</span>
-<span class="n">Function</span> <span class="p">:</span> <span class="n">decode_mpver</span> <span class="o">-</span> <span class="n">Time</span> <span class="n">elapsed</span> <span class="p">:</span> <span class="mf">7.257000207901001</span>
+<span class="n">Function</span> <span class="p">:</span> <span class="n">decode_mpver</span> <span class="o">-</span> <span class="n">Time</span> <span class="n">elapsed</span> <span class="p">:</span> <span class="mf">7.542262077331543</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  52.778 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 1 minutes  1.463 seconds)</p>
 <div class="sphx-glr-footer docutils container">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/plot_full_pipeline_example.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_full_pipeline_example.py</span></code></a></div>

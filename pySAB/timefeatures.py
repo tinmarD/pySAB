@@ -19,7 +19,8 @@ sns.set_context('paper')
 
 
 class TimeFeatures:
-    """ Represent the evolution of different features over a time course ``[tmin, tmax]``, for multiples trials, for
+    """ Class for the extraction and visualization of features across time from the raw amplitude data.
+    Visualize the evolution of different features over a time course ``[tmin, tmax]``, for multiples trials, for
     multiple conditions. The condition of each trial is defined by the ``labels`` vector.
     The original data is given by the 3D array ``data_ori`` (size: [n_features, n_pnts, n_trials]) which usually
     represents the amplitude of each channel. From these original data, other feature can be computed using the

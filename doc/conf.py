@@ -113,8 +113,9 @@ html_theme_options = {
     'navbar_class': "navbar",
     'bootstrap_version': "3",  # default   
     'navbar_links': [
-        ("Overview", 'rst/overview.rst'),
-        ("API", "rst/modules"),
+        ("Datasets", 'rst/dataset_creation'),
+        ("API", "rst/api"),
+        ("Modules", "rst/modules"),
         ("Examples", "auto_examples/index"),
     ],
     }

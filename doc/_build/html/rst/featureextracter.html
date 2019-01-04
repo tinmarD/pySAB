@@ -45,8 +45,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="overview.rst.html">Overview</a></li>
-                <li><a href="modules.html">API</a></li>
+                <li><a href="dataset_creation.html">Datasets</a></li>
+                <li><a href="api.html">API</a></li>
+                <li><a href="modules.html">Modules</a></li>
                 <li><a href="../auto_examples/index.html">Examples</a></li>
             
             
@@ -182,16 +183,27 @@ Default value is : [[2, 4], [4, 8], [8, 12], [15, 30], [30, 80]]</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.cwt_on_data" title="featureextracter.FeatureExtracter.cwt_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cwt_on_data</span></code></a>([wav_name,&nbsp;pfreqs,&nbsp;scale_type,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.bandpower_on_data" title="featureextracter.FeatureExtracter.bandpower_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bandpower_on_data</span></code></a>([filt_type,&nbsp;filt_order,&nbsp;…])</td>
+<td><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.cwt_on_data" title="featureextracter.FeatureExtracter.cwt_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cwt_on_data</span></code></a>([wav_name,&nbsp;pfreqs,&nbsp;scale_type,&nbsp;…])</td>
 <td>Apply the Continous Wavelet Transform to the data <code class="docutils literal notranslate"><span class="pre">data_ori</span></code>, return both power and phase average over the frequency bands.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.dwt_on_data" title="featureextracter.FeatureExtracter.dwt_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dwt_on_data</span></code></a>(wav_name[,&nbsp;scale_type,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.dwt_on_data" title="featureextracter.FeatureExtracter.dwt_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dwt_on_data</span></code></a>(wav_name[,&nbsp;scale_type,&nbsp;…])</td>
 <td>Apply the Discrete Wavelet Transform on the data</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.filter_hilbert_on_data" title="featureextracter.FeatureExtracter.filter_hilbert_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_hilbert_on_data</span></code></a>(center_freq,&nbsp;bandwidth)</td>
+<tr class="row-even"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.filter_hilbert_on_data" title="featureextracter.FeatureExtracter.filter_hilbert_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_hilbert_on_data</span></code></a>(center_freq,&nbsp;bandwidth)</td>
 <td>Estimate the phase of the data <code class="docutils literal notranslate"><span class="pre">data_ori</span></code> using band-pass filtering and the Hilbert transform.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.stft_on_data" title="featureextracter.FeatureExtracter.stft_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stft_on_data</span></code></a>([win_name,&nbsp;win_dur,&nbsp;overlap,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#featureextracter.FeatureExtracter.stft_on_data" title="featureextracter.FeatureExtracter.stft_on_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stft_on_data</span></code></a>([win_name,&nbsp;win_dur,&nbsp;overlap,&nbsp;…])</td>
 <td><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -204,21 +216,30 @@ Default value is : [[2, 4], [4, 8], [8, 12], [15, 30], [30, 80]]</p>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="68%" />
-<col width="32%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>bandpower_on_data</strong></td>
-<td>&#160;</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="featureextracter.FeatureExtracter.bandpower_on_data">
 <code class="descname">bandpower_on_data</code><span class="sig-paren">(</span><em>filt_type='butterworth'</em>, <em>filt_order=3</em>, <em>scale_type=[]</em>, <em>base_tstart=[]</em>, <em>base_tend=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#featureextracter.FeatureExtracter.bandpower_on_data" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>filt_type :</strong></dt>
+<dd></dd>
+<dt><strong>filt_order :</strong></dt>
+<dd></dd>
+<dt><strong>scale_type :</strong></dt>
+<dd></dd>
+<dt><strong>base_tstart :</strong></dt>
+<dd></dd>
+<dt><strong>base_tend :</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
 <dt id="featureextracter.FeatureExtracter.cwt_on_data">

@@ -45,8 +45,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="overview.rst.html">Overview</a></li>
-                <li><a href="modules.html">API</a></li>
+                <li><a href="dataset_creation.html">Datasets</a></li>
+                <li><a href="api.html">API</a></li>
+                <li><a href="modules.html">Modules</a></li>
                 <li><a href="../auto_examples/index.html">Examples</a></li>
             
             
@@ -310,7 +311,8 @@ returns, every channel position containing <code class="docutils literal notrans
 <dt id="sab_dataset.SabDataset">
 <em class="property">class </em><code class="descclassname">sab_dataset.</code><code class="descname">SabDataset</code><span class="sig-paren">(</span><em>matlab_dataset_dirpath</em>, <em>subject_id</em>, <em>dataset_type='rec'</em>, <em>colors_dict=[]</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sab_dataset.SabDataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Class representing a SAB dataset - can be from the encoding phase or recognition phase</p>
+<p>Class representing a SAB dataset - can represent the encoding phase or recognition phase.
+SabDataset instances are created from the Matlab EEGrec/EEGenc datasets (See documentation for more details)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

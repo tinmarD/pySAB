@@ -78,6 +78,20 @@ class FeatureExtracter:
             raise ValueError('Argument data_ori must be a 3D matrix or less')
 
     def bandpower_on_data(self, filt_type='butterworth', filt_order=3, scale_type=[], base_tstart=[], base_tend=[]):
+        """
+
+        Parameters
+        ----------
+        filt_type :
+        filt_order :
+        scale_type :
+        base_tstart :
+        base_tend :
+
+        Returns
+        -------
+
+        """
         n_fbands = len(self.freq_band_names)
         n_features = n_fbands*self.n_chan
         feature_data = np.zeros((n_features, self.n_pnts, self.n_trials))

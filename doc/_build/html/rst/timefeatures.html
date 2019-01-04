@@ -45,8 +45,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="overview.rst.html">Overview</a></li>
-                <li><a href="modules.html">API</a></li>
+                <li><a href="dataset_creation.html">Datasets</a></li>
+                <li><a href="api.html">API</a></li>
+                <li><a href="modules.html">Modules</a></li>
                 <li><a href="../auto_examples/index.html">Examples</a></li>
             
             
@@ -130,7 +131,8 @@
 <dt id="timefeatures.TimeFeatures">
 <em class="property">class </em><code class="descclassname">timefeatures.</code><code class="descname">TimeFeatures</code><span class="sig-paren">(</span><em>data</em>, <em>labels</em>, <em>tmin</em>, <em>tmax</em>, <em>channel_names</em>, <em>label_names</em>, <em>srate</em>, <em>reaction_times=[]</em>, <em>name=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#timefeatures.TimeFeatures" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Represent the evolution of different features over a time course <code class="docutils literal notranslate"><span class="pre">[tmin,</span> <span class="pre">tmax]</span></code>, for multiples trials, for
+<p>Class for the extraction and visualization of features across time from the raw amplitude data.
+Visualize the evolution of different features over a time course <code class="docutils literal notranslate"><span class="pre">[tmin,</span> <span class="pre">tmax]</span></code>, for multiples trials, for
 multiple conditions. The condition of each trial is defined by the <code class="docutils literal notranslate"><span class="pre">labels</span></code> vector.
 The original data is given by the 3D array <code class="docutils literal notranslate"><span class="pre">data_ori</span></code> (size: [n_features, n_pnts, n_trials]) which usually
 represents the amplitude of each channel. From these original data, other feature can be computed using the

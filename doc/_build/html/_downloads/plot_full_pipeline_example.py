@@ -68,9 +68,9 @@ help(sab_dataset.create_features)
 print(time_features)
 
 ###########################################
-# TimeDecoder Class
+# TimeDecoder Class.
 # In this step, the time_decoder instance is created from the TimeDecoder class. This class allow to run classification on
-# the time_features data
+# the time_features data.
 # First we need to created a classifier to the time_decoder instance. It can be Support Vector Machine, LDA, ... as long
 # as it support 2-classes classification with fit and predict methods
 # In this example, we use a SVM classifier, with C parameter set to 1
@@ -80,7 +80,7 @@ svm_clf = svm.SVC(kernel='linear', probability=True)
 time_decoder = TimeDecoder(svm_clf)
 
 ###########################################
-# Decoding
+# Decoding.
 # We can now start to classify the EEG data (stored in time_features), given 2 conditions (e.g. 'hits' and 'Correct rejects')
 # by using the decode method.
 data, _, labels, _ = time_features.get_data(label_keys=[1, 2])
@@ -90,8 +90,8 @@ print(time_features.label_dict)
 scores = time_decoder.decode_mpver(data, labels, time_features.label_dict)
 
 ###########################################
-# You can select data using the arguments of get_data method (see help(time_features.get_data))
-# The possible selection arguments are feature_pos, feature_type, feature_channame, label_keys and time_points
+# You can select data using the arguments of get_data method (see help(time_features.get_data)).
+# The possible selection arguments are feature_pos, feature_type, feature_channame, label_keys and time_points.
 # The current time_features instance contains the following channels :
 print(time_features.channel_names)
 

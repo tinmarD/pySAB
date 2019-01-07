@@ -1,6 +1,6 @@
 # SAB_main: Analyse the SAB experiment
 
-The documentation is here : http://sab-main.readthedocs.io
+The documentation is here : https://pysab.readthedocs.io/en/latest/
 
 Author: Martin Deudon
 

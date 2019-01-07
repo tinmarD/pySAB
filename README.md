@@ -17,16 +17,7 @@ The documentation is here : https://pysab.readthedocs.io/en/latest/
 # Installation
 
 SAB_main is using Python 3
-The following packages are needed :
- * pywavelets
- * tqdm
- * seaborn
- * datetime
- * sklearn
- * scipy
- * numpy
- * matplotlib
- * _pickle
+The list of packages needed is in the requirements.txt file
 
 # Screenshots
 

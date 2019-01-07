@@ -1,7 +1,5 @@
 # SAB_main: Analyse the SAB experiment
 
-The documentation is here : https://pysab.readthedocs.io/en/latest/
-
 Author: Martin Deudon
 
 The SAB (Speed and Accuracy Boosting) was introduced in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory
@@ -12,7 +10,12 @@ The SAB_main package allows you to do several analyses:
  * Feature extraction
  * Correlations between feature and reaction times
 
+# Documentation 
+
+The documentation is here : https://pysab.readthedocs.io/en/latest/
+
 # Installation
+
 SAB_main is using Python 3
 The following packages are needed :
  * pywavelets
